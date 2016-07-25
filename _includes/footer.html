@@ -1,0 +1,65 @@
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-sm-3">
+        <h6 class="text-uppercase">Information</h6>
+        <ul class="list-unstyled">
+          <li><a href="demo">Site Demo</a></li>
+        </ul>
+      </div>
+      <div class="col-xs-6 col-sm-3 column">
+        <h6 class="text-uppercase">About</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Delivery Information</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-3 column">
+        <h6 class="text-uppercase">Stay Posted</h6>
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" title="No spam, we promise!" placeholder="Tell us your email">
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#emailModal" type="button">Subscribe for updates</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-xs-12 col-sm-3 text-right">
+        <h6 class="text-uppercase">Follow</h6>
+        <ul class="list-inline">
+          <li><a rel="nofollow" href="" title="Twitter"><i class="icon-lg ion-social-twitter-outline"></i></a>&nbsp;</li>
+          <li><a rel="nofollow" href="" title="Facebook"><i class="icon-lg ion-social-facebook-outline"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <br>
+    <span class="pull-right text-muted small"><a href="http://www.codeply.com">Theme by Codeply</a><!-- ©2015 Company--></span>
+  </div>
+  <!--scripts loaded here-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+  <script src="js/scripts.js"></script>
+</footer>
+<div id="footerModals">
+  <div id="emailModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          {% include mailchimp-email-signup.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide"
+  });
+});
+</script>

@@ -1,0 +1,120 @@
+header {
+  color: #001A33;
+	background-image: url('../img/world-large-inv-2.png');
+	background-size: cover;
+}
+p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-family: 'Open Sans',Arial,sans-serif;
+}
+.feature {
+  padding: 40px 0;
+}
+/*maps*/
+@media (max-height: 700px){
+  #map {
+    height: 300px!important;
+  }
+}
+.leaflet-container a {
+  color: #007FFF;
+}
+.leaflet-control a {
+  color:black;
+}
+.leaflet-container {
+  font: 12px/1.5 'Montserrat','Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+#topNav {
+  border-bottom: thin solid rgba(224, 224, 227, 0.4);
+}
+.navbar-toggler {
+	margin-top: 0.8rem;
+	padding: 1px 6px;
+}
+.navbar-nav.pull-right {
+	padding-top: 10px;
+}
+.header-content .inner h1 {
+	font-size: 45px;
+}
+.icon-md {
+	font-size: 30px;
+}
+.site-logo:focus,
+.site-logo:hover,
+.site-logo:active  {
+	outline: -webkit-focus-ring-color auto 5px;
+}
+.navbar-toggler:focus, .navbar-toggler:hover {
+	outline: -webkit-focus-ring-color auto 5px;
+}
+.nav-link:hover,
+.nav-link:focus {
+	color:#007FFF;
+}
+.navbar-nav.pull-right {
+  margin-left: 10px;
+}
+.site-logo {
+	float:left;
+	height: 60px;
+}
+.header-button {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  float: right;
+  height: auto;
+}
+.header-button:hover,
+.header-button:focus {
+	outline:none;
+}
+.nav-search {
+  padding: 5px 0!important;
+  font-size: 1.5rem;
+}
+@media (max-width:1200px) {
+	.header-button {
+    margin-top: 1rem;
+	}
+  .navbar-nav.pull-right {
+    margin-right: 1rem;
+    padding-top: 0;
+  }
+}
+@media (max-width:768px) {
+	.site-logo {
+		float:none;
+		height: 50px;
+	}
+	.header-button {
+		float: right;
+		margin-left:0;
+		margin-right:1rem;
+	}
+}
+@media (max-width:568px) {
+	.site-logo {
+		height: 45px;
+	}
+	.navbar-toggler {
+    margin-top: 0.4rem;
+	}
+	.header-button {
+    margin-top: 0.6rem;
+		margin-right:1rem;
+    height: auto;
+	}
+	.btn-group-sm>.btn, .btn-sm {
+		font-size: 10px;
+	}
+}
+@media (max-width:400px) {
+	.header-button {
+		display:none;
+	}
+}
