@@ -3,50 +3,39 @@ layout: home
 map: homepage-map.js
 ---
 <body class="bg-faded">
-  <!--header id="top">
-    <div class="header-content">
-      <div class="inner">
-        <h1 style="font-size:45px;">Welcome to the Ohio Chapter of URISA</h1>
-        <h5 class="wow fadeIn text-normal">An officially recognized association of GIS Professionals in Ohio</h5>
-        <hr>
-        <a href="#about" class="btn btn-primary-outline btn-xl page-scroll wow fadeInUp">Learn More</a>
-      </div>
-    </div>
-  </header-->
-  <!-- Place somewhere in the <body> of your page -->
-  <header>
-    <div id="top" class="flexslider header-content">
+  <header id="top" class="slider-wrapper">
+    <div class="flexslider header-content urisa-slider">
       <ul class="slides">
         <li>
-          <div class="inner">
+          <div class="inner inner-slide">
             <h1 style="font-size:45px;">Welcome to the Ohio Chapter of URISA</h1>
             <h5 class="wow fadeIn text-normal">An officially recognized association of GIS Professionals in Ohio</h5>
             <hr>
-            <a href="#about" class="btn btn-primary-outline btn-xl page-scroll wow fadeInUp">Learn More</a>
+            <a href="#about" class="btn btn-primary-outline btn-lg page-scroll wow fadeInUp">Learn More</a>
           </div>
         </li>
         <li>
           <div class="inner">
-            <h1 style="font-size:45px;">Slide 2</h1>
-            <h5 class="wow fadeIn text-normal">An officially recognized association of GIS Professionals in Ohio</h5>
+            <h1 style="font-size:45px;">2016 Ohio GIS Conference</h1>
+            <h5 class="wow fadeIn text-normal">Apps, Bridges &amp Gaps</h5>
             <hr>
-            <a href="#about" class="btn btn-primary-outline btn-xl page-scroll wow fadeInUp">Learn More</a>
+            <a href="#about" class="btn btn-primary-outline btn page-scroll wow fadeInUp">More</a>
           </div>
         </li>
         <li>
           <div class="inner">
-            <h1 style="font-size:45px;">Slide 3</h1>
-            <h5 class="wow fadeIn text-normal">An officially recognized association of GIS Professionals in Ohio</h5>
+            <h1 style="font-size:45px;">Post #2</h1>
+            <h5 class="wow fadeIn text-normal">This is a post with the 'featured: true' in the yaml header</h5>
             <hr>
-            <a href="#about" class="btn btn-primary-outline btn-xl page-scroll wow fadeInUp">Learn More</a>
+            <a href="#about" class="btn btn-primary-outline btn page-scroll wow fadeInUp">More</a>
           </div>
         </li>
         <li>
           <div class="inner">
-            <h1 style="font-size:45px;">Slide 4</h1>
-            <h5 class="wow fadeIn text-normal">An officially recognized association of GIS Professionals in Ohio</h5>
+            <h1 style="font-size:45px;">Featured Post #3</h1>
+            <h5 class="wow fadeIn text-normal">Featured posts would be limited to 3 roughly</h5>
             <hr>
-            <a href="#about" class="btn btn-primary-outline btn-xl page-scroll wow fadeInUp">Learn More</a>
+            <a href="#about" class="btn btn-primary-outline btn page-scroll wow fadeInUp">More</a>
           </div>
         </li>
       </ul>
@@ -181,14 +170,14 @@ map: homepage-map.js
     </div>
     <div class="container wow fadeInUp">
       <div class="row">
-        <div class="col-lg-4 col-md-4 text-center">
+        <div class="col-lg-4 col-md-4 col-sm-6 text-center">
           <div class="feature">
             <i class="icon-lg ion-ios-flask wow fadeIn" data-wow-delay=".1s"></i>
             <h6 class="text-uppercase">Workshops</h6>
             <p class="text-muted m-b-0">Description</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 text-center">
+        <div class="col-lg-4 col-md-4 col-sm-6 text-center">
           <div class="feature">
             <a href="http://ogrip.oit.ohio.gov/Events/OhioGISConference.aspx" target="_blank">
               <i class="icon-lg ion-ios-grid-view-outline  wow fadeInUp"></i>
@@ -197,30 +186,28 @@ map: homepage-map.js
             <p class="text-muted m-b-0">Description</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 text-center">
+        <div class="col-lg-4 col-md-4 col-sm-6 text-center">
           <div class="feature">
             <i class="icon-lg ion-ios-paper wow fadeIn" data-wow-delay=".1s"></i>
             <h6 class="text-uppercase">Blog</h6>
             <p class="text-muted m-b-0">Description</p>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-4 text-center">
+        <div class="col-lg-4 col-md-4 col-sm-6 text-center">
           <div class="feature">
             <i class="icon-lg ion-ios-infinite wow fadeIn" data-wow-delay=".1s"></i>
             <h6 class="text-uppercase">Mentoring</h6>
             <p class="text-muted m-b-0">Description</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 text-center">
+        <div class="col-lg-4 col-md-4 col-sm-6 text-center">
           <div class="feature">
             <i class="icon-lg ion-ios-people wow fadeInUp"></i>
             <h6 class="text-uppercase">Membership</h6>
             <p class="text-muted m-b-0">Description</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 text-center">
+        <div class="col-lg-4 col-md-4 col-sm-6 text-center">
           <div class="feature">
             <i class="icon-lg ion-ios-location wow fadeIn" data-wow-delay=".1s"></i>
             <h6 class="text-uppercase">Maps</h6>
@@ -440,14 +427,14 @@ map: homepage-map.js
       </div>
     </div>
   </section-->
-	<section id="user-groups" class="bg-alt" style="padding:70px 0 0 0;">
+	<section id="user-groups" class="bg-alt leaflet-map" style="padding:70px 0 0 0;">
     <div id="map" class="center-block" style="width:100%;height:600px;position:realtive;padding:15px 0;">
       <div class="text-center" style="z-index:800;position:relative;margin: auto 40px;">
         <h2 class="margin-top-0 wow fadeIn">Ohio GIS User Groups</h2>
         <hr class="light" /></div>
     </div>
 	</section>
-  <aside class="bg-alt" id="membership" style="padding: 100px 0;">
+  <aside class="bg-alt" id="membership" style="padding: 100px 0 40px;">
     <div class="container text-center">
       <div class="call-to-action">
         <h2 class="text-primary">Membership</h2>

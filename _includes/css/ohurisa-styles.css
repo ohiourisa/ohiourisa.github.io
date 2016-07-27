@@ -9,15 +9,33 @@ p {
   margin-bottom: 20px;
   font-family: 'Open Sans',Arial,sans-serif;
 }
+/*flexslider tweaks*/
+.flexslider .flex-control-paging li a.flex-active {
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  margin: 0 0.5rem;
+}
+.slider-wrapper {
+  overflow: hidden;
+}
+.flex-direction-nav a {
+  height: 4rem;
+}
+.flex-control-nav {
+  position: relative;;
+}
+.flexslider.urisa-slider {
+  background: transparent;
+  border: none;
+  height: 20%;
+}
+/*end flexslider tweaks*/
 .feature {
   padding: 40px 0;
 }
-/*maps*/
-@media (max-height: 700px){
-  #map {
-    height: 300px!important;
-  }
-}
+/*custom leaflet maps*/
 .leaflet-container a {
   color: #007FFF;
 }
@@ -27,6 +45,14 @@ p {
 .leaflet-container {
   font: 12px/1.5 'Montserrat','Helvetica Neue', Arial, Helvetica, sans-serif;
 }
+@media (max-height: 680px){
+  #map,
+  .leaflet-map  {
+    height: 300px!important;
+    min-height: 300px;
+  }
+}
+/*custom leaflet maps*/
 #topNav {
   border-bottom: thin solid rgba(224, 224, 227, 0.4);
 }
@@ -77,6 +103,15 @@ p {
   padding: 5px 0!important;
   font-size: 1.5rem;
 }
+footer a {
+  color: inherit;
+}
+footer a:hover,
+footer a:focus {
+  color: #0077ff;
+  text-decoration: none;
+}
+/*media queries*/
 @media (max-width:1200px) {
 	.header-button {
     margin-top: 1rem;
