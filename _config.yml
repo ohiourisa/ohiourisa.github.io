@@ -4,7 +4,11 @@ baseurl: ""
 permalink: /:categories/:title/index.html
 description: Ohio URISA Homepage - An officially recognized association of GIS Professionals in Ohio
 author: Ohio URISA
+header-img: world-large-inv-2.png
+logo: ohurisa-logo.png
 twitter: ohiourisa
 facebook:
+include:
+  - "_pages"
 exclude:
   - node_modules

@@ -1,0 +1,5 @@
+---
+layout: default
+title: Events
+permalink: /events/index.html
+---

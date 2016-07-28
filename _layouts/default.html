@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+{{ content }}
+{% include footer.html %}
+{% if page.map %}
+<!--maps-->
+<script>
+{% include {{ page.map }} %}
+</script>
+{% endif %}
+</html>

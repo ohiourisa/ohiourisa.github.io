@@ -1,100 +1,19 @@
 ---
-layout: home
-map: homepage-map.js
+layout: default
+headline: Welcome to the Ohio Chapter of URISA
+subtitle: An officially recognized association of GIS Professionals in Ohio
+map: maps/homepage-map.js
 ---
 <body class="bg-faded">
-  <header id="top" class="slider-wrapper">
-    <div class="flexslider header-content urisa-slider">
-      <ul class="slides">
-        <li>
-          <div class="inner inner-slide">
-            <h1 style="font-size:45px;">Welcome to the Ohio Chapter of URISA</h1>
-            <h5 class="wow fadeIn text-normal">An officially recognized association of GIS Professionals in Ohio</h5>
-            <hr>
-            <a href="#about" class="btn btn-primary-outline btn-lg page-scroll wow fadeInUp">Learn More</a>
-          </div>
-        </li>
-        <li>
-          <div class="inner">
-            <h1 style="font-size:45px;">2016 Ohio GIS Conference</h1>
-            <h5 class="wow fadeIn text-normal">Apps, Bridges &amp Gaps</h5>
-            <hr>
-            <a href="#about" class="btn btn-primary-outline btn page-scroll wow fadeInUp">More</a>
-          </div>
-        </li>
-        <li>
-          <div class="inner">
-            <h1 style="font-size:45px;">Post #2</h1>
-            <h5 class="wow fadeIn text-normal">This is a post with the 'featured: true' in the yaml header</h5>
-            <hr>
-            <a href="#about" class="btn btn-primary-outline btn page-scroll wow fadeInUp">More</a>
-          </div>
-        </li>
-        <li>
-          <div class="inner">
-            <h1 style="font-size:45px;">Featured Post #3</h1>
-            <h5 class="wow fadeIn text-normal">Featured posts would be limited to 3 roughly</h5>
-            <hr>
-            <a href="#about" class="btn btn-primary-outline btn page-scroll wow fadeInUp">More</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </header>
-  <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-        <!--☰-->
-        <i class="icon-md ion-grid"></i>
-      </button>
-      <div class="site-logo-wrapper">
-        <a class="page-scroll" href="#top"><img class="site-logo" src="img/ohurisa-logo.png" /></a>
-				<span class="call-to-action site-logo header-button">
-					<a data-toggle="modal" href="#aboutModal" target="ext" class="btn btn-danger-outline btn-sm text-uppercase" style="visibility: visible; animation-name: flipInX;">Next Upcoming Event</a>
-				</span>
-			</div>
-      <!--a class="navbar-brand page-scroll" href="#first">Ohio Chapter of URISA</a-->
-      <div class="collapse navbar-toggleable-sm" id="collapsingNavbar">
-        <ul class="nav navbar-nav">
-          <!--original menu-->
-        </ul>
-        <ul class="nav navbar-nav pull-right">
-          <li class="nav-item">
-            <a class="nav-link page-scroll" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link page-scroll" href="#events">Events</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link page-scroll" href="#news">News</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link page-scroll" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link page-scroll" href="#user-groups">User Groups</a>
-          </li>
-          <!--li class="nav-item">
-									<a class="nav-link page-scroll" href="#four">Mentoring</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link page-scroll" href="#four">Membership</a>
-								</li-->
-          <li class="nav-item">
-            <a class="nav-link page-scroll" href="#membership">Connect</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link page-scroll nav-search" data-toggle="modal" href="#aboutModal" target="ext" ><i class="icon ion-search nav-search"></i></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  {% include header.html %}
+  {% include nav-home.html %}
   <section id="about">
     <div class="container wow fadeInUp">
-      <h2>About Ohio URISA</h2>
-      <p class="lead"></p>
-      <p>
+      <div class="text-center">
+        <h2>About Ohio URISA</h2>
+        <p class="lead"></p>
+        <p>
+      </div>
         <!--				President - John Puente
 		Vice President - Mark Yandrick
 		Past President - Tom Fisher
@@ -128,10 +47,11 @@ map: homepage-map.js
   </section>
   <section id="news">
     <div class="container wow fadeInUp">
-      <h2>Recent News</h2>
-      <p class="lead">
-        Here are some recent news items!
-      </p>
+      <div class="text-center">
+        <h2>Recent News</h2>
+        <p class="lead">
+          Here are some recent news items!
+        </p></div>
       <div class="card-group">
         <!-- card -->
         <div class="card">

@@ -10,128 +10,128 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@ohiourisa">
   <meta name="twitter:creator" content="@ohiourisa">
-  <meta name="twitter:title" content="Ohio URISA">
-  <meta name="twitter:description" content="Ohio URISA Homepage - An officially recognized association of GIS Professionals in Ohio">
-  <meta name="twitter:domain" content="www.ohurisa.com"/>
-  <meta name="twitter:image" content="/img/">
   <!--Open Graph meta data-->
+  <meta property="og:site_name" content="Ohio URISA" />
   <meta property="og:title" content="" />
   <meta propety="og:type" content="website" />
-  <meta property="og:site_name" content="Ohio URISA" />
-  <meta property="og:image" content="/images/" />
+  <meta property="og:image" content="/img/world-large-inv-2.png" />
   <meta property="og:description" content="Ohio URISA Homepage - An officially recognized association of GIS Professionals in Ohio" />
   <link property="og:url" content="//" />
   <title>Ohio URISA</title>
   <!-- end meta details-->
 
   <!--Bootstrap 4-->
-  <!--link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css" /-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
-  
-  <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/bootstrap-4.0.0-alpha.min.css">
+  <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous"-->
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
 
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
   <!--Mapping via LeafletJS 0.7 updated 07-15-2016 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
-  
+
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body class="bg-faded">
   <header id="top" class="slider-wrapper">
-    <div class="flexslider header-content urisa-slider">
-      <ul class="slides">
-        <li>
-          <div class="inner inner-slide">
-            <h1 style="font-size:45px;">Welcome to the Ohio Chapter of URISA</h1>
-            <h5 class="wow fadeIn text-normal">An officially recognized association of GIS Professionals in Ohio</h5>
-            <hr>
-            <a href="#about" class="btn btn-primary-outline btn-lg page-scroll wow fadeInUp">Learn More</a>
-          </div>
+  <div class="flexslider header-content urisa-slider">
+    <ul class="slides">
+      <li>
+        <div class="inner inner-slide">
+          <h1 style="font-size:45px;">Welcome to the Ohio Chapter of URISA</h1>
+          <h5 class="wow fadeIn text-normal">An officially recognized association of GIS Professionals in Ohio</h5>
+          <hr>
+          <a href="#about" class="btn btn-primary-outline btn-lg page-scroll wow fadeInUp">Learn More</a>
+        </div>
+      </li>
+      <li>
+        <!--insert for loop-->
+        <div class="inner">
+          <h1 style="font-size:45px;">2016 Ohio GIS Conference</h1>
+          <h5 class="wow fadeIn text-normal">Apps, Bridges &amp Gaps</h5>
+          <hr>
+          <a href="#about" class="btn btn-primary-outline btn-lg wow fadeInUp">Read More</a>
+        </div>
+      </li>
+      <li>
+        <div class="inner">
+          <h1 style="font-size:45px;">Post #2</h1>
+          <h5 class="wow fadeIn text-normal">This is a post with the 'featured: true' in the yaml header</h5>
+          <hr>
+          <a href="#about" class="btn btn-primary-outline btn-lg wow fadeInUp">Read More</a>
+        </div>
+      </li>
+      <li>
+        <div class="inner">
+          <h1 style="font-size:45px;">Featured Post #3</h1>
+          <h5 class="wow fadeIn text-normal">Featured posts would be limited to 3 roughly</h5>
+          <hr>
+          <a href="#about" class="btn btn-primary-outline btn-lg wow fadeInUp">Read More</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</header>
+
+  <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+      <!--☰-->
+      <i class="icon-md ion-grid"></i>
+    </button>
+    <div class="site-logo-wrapper">
+      <a class="page-scroll" href="#top"><img class="site-logo" src="/img/ohurisa-logo.png" /></a>
+      <span class="call-to-action site-logo header-button">
+        <a data-toggle="modal" href="#aboutModal" target="ext" class="btn btn-danger-outline btn-sm text-uppercase" style="visibility: visible; animation-name: flipInX;">Next Upcoming Event</a>
+      </span>
+    </div>
+    <!--a class="navbar-brand page-scroll" href="#first">Ohio Chapter of URISA</a-->
+    <div class="collapse navbar-toggleable-sm" id="collapsingNavbar">
+      <ul class="nav navbar-nav">
+        <!--original menu-->
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+        <li class="nav-item">
+          <a class="nav-link page-scroll" href="#about">About</a>
         </li>
-        <li>
-          <div class="inner">
-            <h1 style="font-size:45px;">2016 Ohio GIS Conference</h1>
-            <h5 class="wow fadeIn text-normal">Apps, Bridges &amp Gaps</h5>
-            <hr>
-            <a href="#about" class="btn btn-primary-outline btn page-scroll wow fadeInUp">More</a>
-          </div>
+        <li class="nav-item">
+          <a class="nav-link page-scroll" href="#events">Events</a>
         </li>
-        <li>
-          <div class="inner">
-            <h1 style="font-size:45px;">Post #2</h1>
-            <h5 class="wow fadeIn text-normal">This is a post with the 'featured: true' in the yaml header</h5>
-            <hr>
-            <a href="#about" class="btn btn-primary-outline btn page-scroll wow fadeInUp">More</a>
-          </div>
+        <li class="nav-item">
+          <a class="nav-link page-scroll" href="#news">News</a>
         </li>
-        <li>
-          <div class="inner">
-            <h1 style="font-size:45px;">Featured Post #3</h1>
-            <h5 class="wow fadeIn text-normal">Featured posts would be limited to 3 roughly</h5>
-            <hr>
-            <a href="#about" class="btn btn-primary-outline btn page-scroll wow fadeInUp">More</a>
-          </div>
+        <li class="nav-item">
+          <a class="nav-link page-scroll" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link page-scroll" href="#user-groups">User Groups</a>
+        </li>
+        <!--li class="nav-item">
+                <a class="nav-link page-scroll" href="#four">Mentoring</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#four">Membership</a>
+              </li-->
+        <li class="nav-item">
+          <a class="nav-link page-scroll" href="#membership">Connect</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link page-scroll nav-search" data-toggle="modal" href="#searchModal" target="ext" ><i class="icon ion-search nav-search"></i></a>
         </li>
       </ul>
     </div>
-  </header>
-  <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-        <!--☰-->
-        <i class="icon-md ion-grid"></i>
-      </button>
-      <div class="site-logo-wrapper">
-        <a class="page-scroll" href="#top"><img class="site-logo" src="img/ohurisa-logo.png" /></a>
-				<span class="call-to-action site-logo header-button">
-					<a data-toggle="modal" href="#aboutModal" target="ext" class="btn btn-danger-outline btn-sm text-uppercase" style="visibility: visible; animation-name: flipInX;">Next Upcoming Event</a>
-				</span>
-			</div>
-      <!--a class="navbar-brand page-scroll" href="#first">Ohio Chapter of URISA</a-->
-      <div class="collapse navbar-toggleable-sm" id="collapsingNavbar">
-        <ul class="nav navbar-nav">
-          <!--original menu-->
-        </ul>
-        <ul class="nav navbar-nav pull-right">
-          <li class="nav-item">
-            <a class="nav-link page-scroll" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link page-scroll" href="#events">Events</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link page-scroll" href="#news">News</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link page-scroll" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link page-scroll" href="#user-groups">User Groups</a>
-          </li>
-          <!--li class="nav-item">
-									<a class="nav-link page-scroll" href="#four">Mentoring</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link page-scroll" href="#four">Membership</a>
-								</li-->
-          <li class="nav-item">
-            <a class="nav-link page-scroll" href="#membership">Connect</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link page-scroll nav-search" data-toggle="modal" href="#aboutModal" target="ext" ><i class="icon ion-search nav-search"></i></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  </div>
+</nav>
+
   <section id="about">
     <div class="container wow fadeInUp">
-      <h2>About Ohio URISA</h2>
-      <p class="lead"></p>
-      <p>
+      <div class="text-center">
+        <h2>About Ohio URISA</h2>
+        <p class="lead"></p>
+        <p>
+      </div>
         <!--				President - John Puente
 		Vice President - Mark Yandrick
 		Past President - Tom Fisher
@@ -246,10 +246,11 @@
   </section>
   <section id="news">
     <div class="container wow fadeInUp">
-      <h2>Recent News</h2>
-      <p class="lead">
-        Here are some recent news items!
-      </p>
+      <div class="text-center">
+        <h2>Recent News</h2>
+        <p class="lead">
+          Here are some recent news items!
+        </p></div>
       <div class="card-group">
         <!-- card -->
         <div class="card">
@@ -702,8 +703,10 @@
     <span class="pull-right text-muted small"><a href="http://www.codeply.com">Theme by Codeply</a><!-- ©2015 Company--></span>
   </div>
   <!--scripts loaded here-->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.3/js/tether.min.js"></script>
+  <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script-->
+  <script src="/js/bootstrap-4.0.0-alpha.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
   <script src="js/scripts.js"></script>
@@ -762,6 +765,28 @@
       </div>
     </div>
   </div>
+  <div id="searchModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div>
+            <form>
+              <div>
+                <h2>Search Ohio URISA</h2>
+                <div>
+                  <label>Search</label>
+                  <input type="text" value="Search...">
+                </div>
+                <div class="clear">
+                  <button type="submit" value="Subscribe" name="search" class="btn btn-primary btn center-block" data-dismiss="modal" aria-hidden="true" style="margin:0;">Enter</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <script>
 $(window).load(function() {
@@ -787,6 +812,7 @@ var cdblight = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/l
     maxZoom: 20,
     maxNativeZoom: 18
 }).addTo(map);
+
 </script>
 
 </html>

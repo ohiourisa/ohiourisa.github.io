@@ -34,8 +34,10 @@
     <span class="pull-right text-muted small"><a href="http://www.codeply.com">Theme by Codeply</a><!-- ©2015 Company--></span>
   </div>
   <!--scripts loaded here-->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.3/js/tether.min.js"></script>
+  <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script-->
+  <script src="{{ site.baseurl }}/js/bootstrap-4.0.0-alpha.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
   <script src="js/scripts.js"></script>
@@ -46,6 +48,28 @@
       <div class="modal-content">
         <div class="modal-body">
           {% include mailchimp-email-signup.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="searchModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div>
+            <form>
+              <div>
+                <h2>Search Ohio URISA</h2>
+                <div>
+                  <label>Search</label>
+                  <input type="text" value="Search...">
+                </div>
+                <div class="clear">
+                  <button type="submit" value="Subscribe" name="search" class="btn btn-primary btn center-block" data-dismiss="modal" aria-hidden="true" style="margin:0;">Enter</button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
