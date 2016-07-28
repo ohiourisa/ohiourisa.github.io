@@ -1,8 +1,10 @@
 name: Ohio URISA
 url: ""
 baseurl: ""
-permalink: /:title/index.html
-description: OVRDC | Web Apps
+permalink: /:categories/:title/index.html
+description: Ohio URISA Homepage - An officially recognized association of GIS Professionals in Ohio
 author: Ohio URISA
+twitter: @ohiourisa
+facebook:
 exclude:
   - node_modules
