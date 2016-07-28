@@ -3,13 +3,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Jekyll | GitHub">
-  <meta name="description" content="{% if page.description%}{{ page.description }}{% else site.description%}{% endif %}">
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <!--Twitter Cards-->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@ohiourisa">
   <meta name="twitter:creator" content="@ohiourisa">
-  <meta name="twitter:title" content="{{ page.title }}">
-  <meta name="twitter:description" content="{{% if page.description%}{{ page.description }}{% else site.description%}{% endif %">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.name }}{% else %}{{ site.name }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <meta name="twitter:domain" content="www.ohurisa.com"/>
   <meta name="twitter:image" content="{{ site.baseurl }}/img/{% if page.feature-img %}{{ page.feature-img }}{% else %}{{ site.logo }}{% endif %}">
   <!--Open Graph meta data-->
