@@ -1,0 +1,45 @@
+<div id="searchModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <!--div id="search-container">
+        <input type="text" id="search-input" placeholder="search...">
+        <ul id="results-container"></ul>
+      </div-->
+        <form id="searchForm" action="#resultsModal" method="get">
+          <label for="search-box">Search</label>
+          <input type="text" id="search-box" name="query">
+          <input type="submit" value="search">
+        </form>
+        <!--ul id="search-results"></ul-->
+      </div>
+    </div>
+  </div>
+</div>
+<div id="resultsModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <!--div id="search-container">
+        <input type="text" id="search-input" placeholder="search...">
+        <ul id="results-container"></ul>
+      </div-->
+        <!--form id="searchForm" method="get">
+          <label for="search-box">Search</label>
+          <input type="text" id="search-box" name="query">
+          <input type="submit" value="search">
+        </form-->
+        <ul id="search-results"></ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$("#searchForm").submit(function(e){
+  setTimeout(function() {
+    $('#searchModal').modal("hide");
+    $('#resultsModal').modal("show");
+  }, 50);
+  e.preventDefault();
+});
+</script>

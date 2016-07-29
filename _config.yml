@@ -9,6 +9,6 @@ logo: ohurisa-logo.png
 twitter: ohiourisa
 facebook:
 include:
-  - "_pages"
+  - _pages
 exclude:
   - node_modules

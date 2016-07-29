@@ -766,34 +766,160 @@
     </div>
   </div>
   <div id="searchModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-body">
-          <div>
-            <form>
-              <div>
-                <h2>Search Ohio URISA</h2>
-                <div>
-                  <label>Search</label>
-                  <input type="text" value="Search...">
-                </div>
-                <div class="clear">
-                  <button type="submit" value="Subscribe" name="search" class="btn btn-primary btn center-block" data-dismiss="modal" aria-hidden="true" style="margin:0;">Enter</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <!--div id="search-container">
+        <input type="text" id="search-input" placeholder="search...">
+        <ul id="results-container"></ul>
+      </div-->
+        <form id="searchForm" action="#resultsModal" method="get">
+          <label for="search-box">Search</label>
+          <input type="text" id="search-box" name="query">
+          <input type="submit" value="search">
+        </form>
+        <!--ul id="search-results"></ul-->
       </div>
     </div>
   </div>
 </div>
+<div id="resultsModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <!--div id="search-container">
+        <input type="text" id="search-input" placeholder="search...">
+        <ul id="results-container"></ul>
+      </div-->
+        <!--form id="searchForm" method="get">
+          <label for="search-box">Search</label>
+          <input type="text" id="search-box" name="query">
+          <input type="submit" value="search">
+        </form-->
+        <ul id="search-results"></ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$("#searchForm").submit(function(e){
+  setTimeout(function() {
+    $('#searchModal').modal("hide");
+    $('#resultsModal').modal("show");
+  }, 50);
+  e.preventDefault();
+});
+</script>
+
+</div>
+
+<!--search script-->
+<script>
+  window.store = {
+    
+    
+      "connect-index-html": {
+        "title": "Connect",
+        "category": "",
+        "content": "",
+        "url": "/connect/index.html"
+      }
+      ,
+    
+      "demo": {
+        "title": "",
+        "category": "",
+        "content": "",
+        "url": "/demo"
+      }
+      ,
+    
+      "events-index-html": {
+        "title": "Events",
+        "category": "",
+        "content": "",
+        "url": "/events/index.html"
+      }
+      ,
+    
+      "feed-xml": {
+        "title": "",
+        "category": "",
+        "content": "",
+        "url": "/feed.xml"
+      }
+      ,
+    
+      "": {
+        "title": "",
+        "category": "",
+        "content": "",
+        "url": "/"
+      }
+      ,
+    
+      "news-index-html": {
+        "title": "News",
+        "category": "",
+        "content": "",
+        "url": "/news/index.html"
+      }
+      ,
+    
+      "js-scripts-js": {
+        "title": "",
+        "category": "",
+        "content": "",
+        "url": "/js/scripts.js"
+      }
+      ,
+    
+      "search-index-html": {
+        "title": "Search",
+        "category": "",
+        "content": "",
+        "url": "/search/index.html"
+      }
+      ,
+    
+      "search-json": {
+        "title": "",
+        "category": "",
+        "content": "",
+        "url": "/search.json"
+      }
+      ,
+    
+      "css-styles-css": {
+        "title": "",
+        "category": "",
+        "content": "",
+        "url": "/css/styles.css"
+      }
+      
+    
+  };
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/0.7.1/lunr.min.js"></script>
+<script src="/js/search.js"></script>
+<!--script src="/js/jekyll-search.js"></script-->
 <script>
 $(window).load(function() {
   $('.flexslider').flexslider({
     animation: "fade"
   });
 });
+/*SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  json: 'http://localhost:4000/search.json',
+  searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+  noResultsText: 'No results found',
+  limit: 10,
+  fuzzy: false,
+  exclude: ['Welcome']
+})*/
+</script>
 </script>
 
 
