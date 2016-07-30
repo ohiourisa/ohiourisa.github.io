@@ -80,22 +80,21 @@
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/0.7.1/lunr.min.js"></script>
 <script src="{{ site.baseurl }}/js/search.js"></script>
-<!--script src="{{ site.baseurl }}/js/jekyll-search.js"></script-->
+<script src="{{ site.baseurl }}/js/jekyll-search.js"></script>
 <script>
 $(window).load(function() {
   $('.flexslider').flexslider({
     animation: "fade"
   });
 });
-/*SimpleJekyllSearch({
+SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
-  json: 'http://localhost:4000/search.json',
+  json: 'ht/search.json',
   searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
   noResultsText: 'No results found',
   limit: 10,
   fuzzy: false,
   exclude: ['Welcome']
-})*/
-</script>
+})
 </script>
