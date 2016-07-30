@@ -5,7 +5,7 @@
     {
       "title"    : "{{ post.title | escape }}",
       "url"      : "{{ site.baseurl }}{{ post.url }}",
-    }
+    },
   {% endfor %}
   {% for page in site.pages %}
     {
