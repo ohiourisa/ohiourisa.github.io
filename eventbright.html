@@ -1,0 +1,21 @@
+---
+layout: default
+permalink: /eventbright/index.html
+---
+<script>
+  var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://www.eventbriteapi.com/v3/events/?token=JCILS24WBMRMC2J67WBF",
+    "method": "GET",
+    "headers": {}
+  }
+
+  $.ajax(settings).done(function (data) {
+    console.log(data);
+    var content = "<h2>" + data.name.text + "</h2>" + data.description.html;
+    $("#eventbrite").append(content);
+  });
+//https://www.eventbriteapi.com/v3/events/:id/?token=JCILS24WBMRMC2J67WBF
+</script>
+<div id="eventbrite"></div>
