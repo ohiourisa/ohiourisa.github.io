@@ -6,7 +6,7 @@ permalink: /eventbright/index.html
   var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://www.eventbriteapi.com/v3/events/search/?token=JCILS24WBMRMC2J67WBF&organizer.id=7891957686&expand=venue",
+    "url": "/https://www.eventbriteapi.com/v3/users/7891957686/events/?order_by=start_desc&token=JCILS24WBMRMC2J67WBF",
     "method": "GET",
     "headers": {}
   }
@@ -17,5 +17,7 @@ permalink: /eventbright/index.html
     $("#eventbrite").append(content);
   });
 //https://www.eventbriteapi.com/v3/events/:id/?token=JCILS24WBMRMC2J67WBF
+//https://www.eventbriteapi.com/v3/users/7891957686/events/?order_by=start_desc&token=JCILS24WBMRMC2J67WBF
+//https://www.eventbriteapi.com/v3/events/search/?token=JCILS24WBMRMC2J67WBF&organizer.id=7891957686&expand=venue
 </script>
 <div id="eventbrite"></div>
