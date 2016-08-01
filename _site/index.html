@@ -179,88 +179,8 @@
           <th>Event</th>
         </tr>
       </thead>
-      <tbody>
-
-        
-            
-            st 20160801<br />
-            
-            dt 20161001<br />
-            
-                Oct 1
-            
-        
-            
-            st 20160801<br />
-            
-            dt 20160801<br />
-            
-                Aug 1
-            
-        
-            
-            st 20160801<br />
-            
-            dt 20160730<br />
-            
-        
-
-        
-        
-        
-        
-            
-            
-            
-        
-            
-            
-            
-                
+      <tbody id="eventsTable">
         <!-- Jekyll Loop for events from post event category - Single event in a single day -->
-        <tr>
-          <td class="agenda-date" class="active" rowspan="1">
-            <div class="dayofmonth">01</div>
-            <div class="dayofweek">Monday</div>
-            <div class="shortdate text-muted">Aug, 2016</div>
-          </td>
-          <td class="agenda-time">
-             5:00 PM
-          </td>
-          <td class="agenda-events">
-            <div class="agenda-event">
-              Ohio URISA Statewide User Group Meeting
-            </div>
-            <div class="text-muted">Park St. Cantina</div>
-            <span><a href="https://www.eventbrite.com/e/26519135448" target="_blank">More Info</a></span>
-          </td>
-        </tr>
-        
-        
-            
-            
-            
-                
-        <!-- Jekyll Loop for events from post event category - Single event in a single day -->
-        <tr>
-          <td class="agenda-date" class="active" rowspan="1">
-            <div class="dayofmonth">01</div>
-            <div class="dayofweek">Saturday</div>
-            <div class="shortdate text-muted">Oct, 2016</div>
-          </td>
-          <td class="agenda-time">
-             5:00 PM
-          </td>
-          <td class="agenda-events">
-            <div class="agenda-event">
-              future
-            </div>
-            <div class="text-muted">Park St. Cantina</div>
-            <span><a href="https://www.eventbrite.com/e/26519135448" target="_blank">More Info</a></span>
-          </td>
-        </tr>
-        
-        
         <!-- Multiple events in a single day (note the rowspan) -->
         <!--tr>
           <td class="agenda-date" class="active" rowspan="3">
@@ -780,7 +700,7 @@
   <script src="/js/bootstrap-4.0.0-alpha.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
-  <script src="/js/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
   <script src="/js/scripts.js"></script>
 </footer>
 <div id="footerModals">
@@ -867,22 +787,55 @@ var settings = {
 }
 
 $.ajax(settings).done(function (event) {
+  /////////////////////
   console.log(event);
   var now = moment().format('YYYYMMDDHHmmss');
-  console.log(now + " " + event[1].date);
+  console.log(now)
+  console.log(event[2].dateString);
   var content;
-  var x;
-  console.log(event.length);
+  var currentEvents = [];
   for (i=0; i < event.length; i++) {
-    if (event[i].title && event[i].date >= now) {
-      console.log(event[i].title)
+    if (event[i].dateString) {
+      currentEvents.push({
+        title: event[i].title,
+        date: event[i].date
+      });
     }
-    $('#events').append(content)
   }
-/*  for (i=0, i < event.length; i++) {
-    content += "<h2>" + event.title + "</h2>" + event.date;
-    $("#events").append(content);
-  }*/
+  for (x in currentEvents) {
+    var title = currentEvents[x].title;
+    $('#eventsTable').append(title);
+    
+  }
+
+  /*for (x=0; (count > 1) && (x < currentEvents.length); x++) {
+    content += currentEvents[x].date + '<br />';
+    var day, month, year, time, title, location, id;
+    id = event[i].eventbright-id;
+    var date = event[i].date;
+    console.log(moment(date).isValid());
+    day = moment().format(date, "DD");
+    console.log(day);
+    month = moment().format(date, "MM");
+    content += '<tr> \
+              <td class="agenda-date" class="active" rowspan="1"> \
+                <div class="dayofmonth">'+ day + '</div> \
+                <div class="dayofweek"></div> \
+                <div class="shortdate text-muted">' + month + '</div> \
+              </td> \
+              <td class="agenda-time"> \
+                 \
+              </td> \
+              <td class="agenda-events"> \
+                <div class="agenda-event"> \
+                  '+ event[i].title + ' \
+                </div> \
+                <div class="text-muted">' + event[i].location + '</div> \
+                <span><a href="https://www.eventbrite.com/e/' + id +'" target="_blank">More Info</a></span> \
+              </td> \
+            </tr>'
+      $('#eventsTable').append(content);
+    }*/
 });
 </script>
 
