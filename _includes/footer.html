@@ -52,6 +52,7 @@
   {% include modals/email-list.html %}
   {% include modals/search.html %}
 </div>
+
 <script>
 $(window).load(function() {
   $('.flexslider').flexslider({
@@ -115,7 +116,7 @@ $.ajax(settings).done(function (event) {
       if (d >= now && y < 1) {
         eventBanner += '<h4>' + event[i].title + '</h4><p>' + event[i].subtitle + '</p>'
         y = y + 1;
-        $('#eventBanner').append('Next Event ' + months[mm] + '&nbsp;' + dd);
+        $('#eventBanner').html('Next Event ' + months[mm] + '&nbsp;' + dd);
       }
       if (d >= now && z < 4) {
         eventsListing += '<tr> \

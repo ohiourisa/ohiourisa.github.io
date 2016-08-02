@@ -4,10 +4,20 @@
 {% if page.homepage == true %}<style>header{min-height:100%;!important}</style>{% endif%}
 <body class="bg-faded">
 {% include header.html %}
-{% if page.homepage %}{% include nav-home.html %}{% else %}{% include nav.html %}{% endif %}
-  <div id="content">
-  {{ content }}
-  </div>
+{% if page.homepage %}
+{% include nav-home.html %}
+<div id="content">
+{{ content }}
+</div>
+{% else %}
+{% include nav.html %}
+<div id="content">
+  <section>
+    <div class="container wow fadeIn">
+        {{ content}}
+  </section>
+</div>
+{% endif %}
 </body>
 {% include footer.html %}
 {% if page.map %}

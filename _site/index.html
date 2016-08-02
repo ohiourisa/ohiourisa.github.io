@@ -49,34 +49,55 @@
           <a href="#content" class="btn btn-primary-outline btn-lg page-scroll wow fadeInUp">Learn More</a>
         </div>
       </li>
-      <li>
-        <!--insert for loop-->
-        <div class="inner">
-          <h1 style="font-size:45px;">2016 Ohio GIS Conference</h1>
-          <h5 class="wow fadeIn text-normal">Apps, Bridges &amp Gaps</h5>
-          <hr>
-          <a href="#about" class="btn btn-primary-outline btn-lg wow fadeInUp">Read More</a>
-        </div>
-      </li>
+      
+      
+      
+      
+      
+      
+      <!-- display post -->
       <li>
         <div class="inner">
-          <h1 style="font-size:45px;">Post #2</h1>
-          <h5 class="wow fadeIn text-normal">This is a post with the 'featured: true' in the yaml header</h5>
+          <h1 style="font-size:45px;">Another Future Event</h1>
+          <h5 class="wow fadeIn text-normal">&nbsp;</h5>
           <hr>
-          <a href="#about" class="btn btn-primary-outline btn-lg wow fadeInUp">Read More</a>
+          <a href="/events/test-event-date-not-same/index.html" class="btn btn-primary-outline btn-lg wow fadeInUp">Read More</a>
         </div>
       </li>
+      
+      
+      
+      
+      <!-- display post -->
       <li>
         <div class="inner">
-          <h1 style="font-size:45px;">Featured Post #3</h1>
-          <h5 class="wow fadeIn text-normal">Featured posts would be limited to 3 roughly</h5>
+          <h1 style="font-size:45px;">A Future Event</h1>
+          <h5 class="wow fadeIn text-normal">&nbsp;</h5>
           <hr>
-          <a href="#about" class="btn btn-primary-outline btn-lg wow fadeInUp">Read More</a>
+          <a href="/events/test-future-event/index.html" class="btn btn-primary-outline btn-lg wow fadeInUp">Read More</a>
         </div>
       </li>
+      
+      
+      
+      
+      <!-- display post -->
+      <li>
+        <div class="inner">
+          <h1 style="font-size:45px;">Ohio URISA Statewide User Group Meeting</h1>
+          <h5 class="wow fadeIn text-normal">&nbsp;</h5>
+          <hr>
+          <a href="/events/2016-statewide-user-group-meeting/index.html" class="btn btn-primary-outline btn-lg wow fadeInUp">Read More</a>
+        </div>
+      </li>
+      
+      
+      
+      
     </ul>
   </div>
 </header>
+
 
 <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -87,7 +108,7 @@
     <div class="site-logo-wrapper">
       <a class="page-scroll" href="#top"><img class="site-logo" src="/img/ohurisa-logo.png" /></a>
       <span class="call-to-action site-logo header-button">
-        <a href="#events" id="eventBanner" class="btn btn-danger-outline btn-sm text-uppercase page-scroll" style="visibility: visible; animation-name: flipInX;"></a>
+        <a href="#events" id="eventBanner" class="btn btn-danger-outline btn-sm text-uppercase page-scroll" style="visibility: visible; animation-name: flipInX;">Next Event</a>
       </span>
     </div>
     <!--a class="navbar-brand page-scroll" href="#first">Ohio Chapter of URISA</a-->
@@ -128,18 +149,18 @@
   </div>
 </nav>
 
-  <div id="content">
-  <section>
+<div id="content">
+<section>
   <div class="container wow fadeInUp">
     <div class="text-center">
       <h2>About Ohio URISA</h2>
       <p class="lead"></p>
       <p>
     </div>
-      We are the officially recognized chapter of URISA for the State of Ohio. The <a href="http://www.urisa.org/" target="_blank">Urban and Regional Information Systems Association (URISA)</a> is a nonprofit association of professionals using Geographic
+      <p>We are the officially recognized chapter of URISA for the State of Ohio. The <a href="http://www.urisa.org/" target="_blank">Urban and Regional Information Systems Association (URISA)</a> is a nonprofit association of professionals using Geographic
       Information Systems (GIS) and other information technologies to solve challenges in state/provincial, regional and local government agencies. URISA is considered to be the premier organization for the use and integration of spatial information.
       As a chapter, our objectives are:
-    </p>
+      </p>
     <ul>
       <li>To encourage the professional advancement of GIS in the State of Ohio through professional education and public awareness.</li>
       <li>To foster the exchange of ideas and provide a forum of discussion on topics related to GIS in the State.</li>
@@ -612,7 +633,8 @@
   </div>
 </div>
 
-  </div>
+</div>
+
 </body>
 <footer id="footer">
   <div class="container">
@@ -723,6 +745,7 @@
 </div>
 
 </div>
+
 <script>
 $(window).load(function() {
   $('.flexslider').flexslider({
@@ -786,7 +809,7 @@ $.ajax(settings).done(function (event) {
       if (d >= now && y < 1) {
         eventBanner += '<h4>' + event[i].title + '</h4><p>' + event[i].subtitle + '</p>'
         y = y + 1;
-        $('#eventBanner').append('Next Event ' + months[mm] + '&nbsp;' + dd);
+        $('#eventBanner').html('Next Event ' + months[mm] + '&nbsp;' + dd);
       }
       if (d >= now && z < 4) {
         eventsListing += '<tr> \

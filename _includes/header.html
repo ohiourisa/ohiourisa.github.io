@@ -9,31 +9,23 @@
           <a href="#content" class="btn btn-primary-outline btn-lg page-scroll wow fadeInUp">Learn More</a>
         </div>
       </li>
-      <li>
-        <!--insert for loop-->
-        <div class="inner">
-          <h1 style="font-size:45px;">2016 Ohio GIS Conference</h1>
-          <h5 class="wow fadeIn text-normal">Apps, Bridges &amp Gaps</h5>
-          <hr>
-          <a href="#about" class="btn btn-primary-outline btn-lg wow fadeInUp">Read More</a>
-        </div>
-      </li>
+      {% if post.title %}{% assign title = post.title %}{% elsif page.title %}{% assign title = page.title %}{% endif %}
+      {% assign counter = 0 %}
+      {% assign maxPostCount = 3 %}
+      {% for post in site.posts %}
+      {% if post.title != title  and counter < maxPostCount  %}
+      {% assign counter=counter | plus:1 %}
+      <!-- display post -->
       <li>
         <div class="inner">
-          <h1 style="font-size:45px;">Post #2</h1>
-          <h5 class="wow fadeIn text-normal">This is a post with the 'featured: true' in the yaml header</h5>
+          <h1 style="font-size:45px;">{{ post.title }}</h1>
+          <h5 class="wow fadeIn text-normal">{% if post.subtitle %}{{ post.subtitle }}{% else %}&nbsp;{% endif %}</h5>
           <hr>
-          <a href="#about" class="btn btn-primary-outline btn-lg wow fadeInUp">Read More</a>
+          <a href="{{ post.url }}" class="btn btn-primary-outline btn-lg wow fadeInUp">Read More</a>
         </div>
       </li>
-      <li>
-        <div class="inner">
-          <h1 style="font-size:45px;">Featured Post #3</h1>
-          <h5 class="wow fadeIn text-normal">Featured posts would be limited to 3 roughly</h5>
-          <hr>
-          <a href="#about" class="btn btn-primary-outline btn-lg wow fadeInUp">Read More</a>
-        </div>
-      </li>
+      {% endif %}
+      {% endfor %}
     </ul>
   </div>
 </header>
