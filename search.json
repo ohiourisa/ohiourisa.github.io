@@ -1,22 +1,19 @@
 ---
 ---
 [
-  {% for post in site.posts %}
+{% for post in site.posts %}{% if post.title %}
   {
     "title": "{{ post.title | xml_escape }}",
-    "author": "{{ post.author | xml_escape }}",
+    "subtitle": "{{ post.subtitle | xml_escape }}",
     "category": "{{ post.category | xml_escape }}",
-    "description": "{{ post.excerpt | xml_escape }}",
+    "keywords": "{{ post.keywords | xml_escape }}",
     "url": "{{ post.url | xml_escape }}"
-  },
-  {% endfor %}
-  {% for page in site.pages %}
+  },{% endif %}{% endfor %}{% for page in site.pages %}{% if page.title %}
   {
     "title": "{{ page.title | xml_escape }}",
-    "author": "{{ page.author | xml_escape }}",
-    "category": "{{ page.category | xml_escape }}",
-    "description": "{{ post.excerpt | xml_escape }}",
-    "url": "{{ page.url | xml_escape }}"
+    "subtitle": "{{ page.subtitle | xml_escape }}",
+    "keywords": "{{ page.keywords | xml_escape }}",
+    "url": "{{ page.url | remove:'index.html' | xml_escape }}"
   }{% unless forloop.last %},{% endunless %}
-  {% endfor %}
+{% endif %}{% endfor %} {}
 ]

@@ -6,8 +6,8 @@
     </button>
     <div class="site-logo-wrapper">
       <a class="page-scroll" href="#top"><img class="site-logo" src="{{ site.baseurl }}/img/{{ site.logo }}" /></a>
-      <span class="call-to-action site-logo header-button">
-        <a data-toggle="modal" href="#aboutModal" target="ext" class="btn btn-danger-outline btn-sm text-uppercase" style="visibility: visible; animation-name: flipInX;">Next Upcoming Event</a>
+      <span class="call-to-action site-logo header-button">{% for event in site.categories.events | limit: 1 %}
+        <a href="#events" class="btn btn-danger-outline btn-sm text-uppercase page-scroll" style="visibility: visible; animation-name: flipInX;">Next Event {{ event.date | date: "%b %-d" }}</a>{% endfor %}
       </span>
     </div>
     <!--a class="navbar-brand page-scroll" href="#first">Ohio Chapter of URISA</a-->
@@ -17,7 +17,7 @@
       </ul>
       <ul class="nav navbar-nav pull-right">
         <li class="nav-item">
-          <a class="nav-link page-scroll" href="#about">About</a>
+          <a class="nav-link page-scroll" href="#content">About</a>
         </li>
         <li class="nav-item">
           <a class="nav-link page-scroll" href="#events">Events</a>
@@ -38,7 +38,7 @@
                 <a class="nav-link page-scroll" href="#four">Membership</a>
               </li-->
         <li class="nav-item">
-          <a class="nav-link page-scroll" href="#membership">Connect</a>
+          <a class="nav-link page-scroll" href="#connect">Connect</a>
         </li>
         <li class="nav-item">
           <a class="nav-link page-scroll nav-search" data-toggle="modal" href="#searchModal" target="ext" ><i class="icon ion-search nav-search"></i></a>

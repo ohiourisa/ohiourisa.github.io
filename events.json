@@ -1,0 +1,14 @@
+---
+---
+[
+{% for event in site.categories.events reversed %}
+  {
+    "title": "{{ event.title | xml_escape }}",
+    "subtitle": "{{ event.location | xml_escape }}",
+    "keywords": "{{ event.keywords | xml_escape }}",
+    "event-id": "{{ event.eventbright-id | xml_escape }}",
+    "dateString": "{{ event.date | date: "%Y%m%d%H%m%S" }}",
+    "date": "{{ event.date }}",
+    "url": "{{ event.url | xml_escape }}"
+  }{% unless forloop.last %},{% endunless %}{% endfor %}
+]

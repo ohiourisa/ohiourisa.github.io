@@ -4,9 +4,9 @@
       <li>
         <div class="inner inner-slide">
           <h1 style="font-size:45px;">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}{% endif %}</h1>
-          <h5 class="wow fadeIn text-normal">{% if page.subtitle %}{{ page.subtitle }}{% endif %}</h5>
+          <h5 class="wow fadeIn text-normal">{% if page.subtitle %}{{ page.subtitle }}{% else %}&nbsp;{% endif %}</h5>
           <hr>
-          <a href="#about" class="btn btn-primary-outline btn-lg page-scroll wow fadeInUp">Learn More</a>
+          <a href="#content" class="btn btn-primary-outline btn-lg page-scroll wow fadeInUp">Learn More</a>
         </div>
       </li>
       <li>

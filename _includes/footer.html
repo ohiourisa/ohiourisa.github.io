@@ -1,7 +1,7 @@
 <footer id="footer">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-4 column">
+      <div class="col-xs-12 col-sm-3">
         <h6 class="text-uppercase">About</h6>
         <ul class="list-unstyled">
           <li><a href="#">Contact Us</a></li>
@@ -11,7 +11,16 @@
           <li><a href="demo">Site Demo</a></li>
         </ul>
       </div>
-      <div class="col-xs-12 col-sm-4 column">
+      <div class="col-xs-12 col-sm-3">
+        <h6 class="text-uppercase">Ohio URISA</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">123 Main St</a></li>
+          <li><a href="#">Columbus, Ohio</a></li>
+          <li><a href="#">contact@ohurisa.org</a></li>
+          <li><a href="#">123-456-7890</a></li>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-3">
         <h6 class="text-uppercase">Updates</h6>
         <form>
           <div class="form-group">
@@ -22,7 +31,7 @@
           </div>
         </form>
       </div>
-      <div class="col-xs-12 col-sm-4 text-right">
+      <div class="col-xs-12 col-sm-3 text-right">
         <h6 class="text-uppercase">Follow</h6>
         <ul class="list-inline">
           <li><a rel="nofollow" href="" title="Twitter"><i class="icon-md ion-social-twitter-outline"></i></a>&nbsp;</li>
@@ -39,19 +48,12 @@
   <script src="{{ site.baseurl }}/js/bootstrap-4.0.0-alpha.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
   <script src="{{ site.baseurl }}/js/scripts.js"></script>
 </footer>
 <div id="footerModals">
-  <div id="emailModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-body">
-          {% include mailchimp-email-signup.html %}
-        </div>
-      </div>
-    </div>
-  </div>
-  {% include search.html %}
+  {% include modals/email-list.html %}
+  {% include modals/search.html %}
 </div>
 <script>
 $(window).load(function() {
@@ -63,10 +65,69 @@ SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
   json: '/search.json',
-  searchResultTemplate: '<dt>{title}</dt><dd>{title}</dd>',
+  searchResultTemplate: '<p><dt><a href="{url}">{title}</a></dt><dd class="text-muted">{subtitle}</dd></p>',
   noResultsText: 'No results found',
   limit: 10,
   fuzzy: false,
   exclude: ['Welcome']
-})
+});
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "{{ site.baseurl }}/events.json",
+  "method": "GET",
+  "headers": {}
+}
+
+$.ajax(settings).done(function (event) {
+  /////////////////////
+  console.log(event);
+  var now = moment().format('YYYYMMDDHHmmss');
+  console.log(now)
+  console.log(event[2].dateString);
+  var content;
+  var currentEvents = [];
+  for (i=0; i < event.length; i++) {
+    if (event[i].dateString) {
+      currentEvents.push({
+        title: event[i].title,
+        date: event[i].date
+      });
+    }
+  }
+  for (x in currentEvents) {
+    var title = currentEvents[x].title;
+    $('#eventsTable').append(title);
+    
+  }
+
+  /*for (x=0; (count > 1) && (x < currentEvents.length); x++) {
+    content += currentEvents[x].date + '<br />';
+    var day, month, year, time, title, location, id;
+    id = event[i].eventbright-id;
+    var date = event[i].date;
+    console.log(moment(date).isValid());
+    day = moment().format(date, "DD");
+    console.log(day);
+    month = moment().format(date, "MM");
+    content += '<tr> \
+              <td class="agenda-date" class="active" rowspan="1"> \
+                <div class="dayofmonth">'+ day + '</div> \
+                <div class="dayofweek"></div> \
+                <div class="shortdate text-muted">' + month + '</div> \
+              </td> \
+              <td class="agenda-time"> \
+                 \
+              </td> \
+              <td class="agenda-events"> \
+                <div class="agenda-event"> \
+                  '+ event[i].title + ' \
+                </div> \
+                <div class="text-muted">' + event[i].location + '</div> \
+                <span><a href="https://www.eventbrite.com/e/' + id +'" target="_blank">More Info</a></span> \
+              </td> \
+            </tr>'
+      $('#eventsTable').append(content);
+    }*/
+});
 </script>

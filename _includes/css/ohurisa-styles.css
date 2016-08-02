@@ -9,6 +9,13 @@ p {
   margin-bottom: 20px;
   font-family: 'Open Sans',Arial,sans-serif;
 }
+
+/*mailchimp embed styles*/
+#mc_embed_signup {
+  background: #fff;
+  clear: left;
+  font: 14px Helvetica, Arial, sans-serif;
+}
 /*flexslider tweaks*/
 .flexslider .flex-control-paging li a.flex-active {
   -moz-transform: scale(1.5);

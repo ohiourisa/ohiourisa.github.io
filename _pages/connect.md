@@ -1,10 +1,6 @@
 ---
 layout: default
 title: Connect
+subtitle: Contact Ohio URISA
 permalink: /connect/index.html
 ---
-{% include nav.html %}
-## Test
-
- - asdf
- - asdfasdf

@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
 {% include head.html %}
-{{ content }}
+{% if page.homepage == true %}<style>header{min-height:100%;!important}</style>{% endif%}
+<body class="bg-faded">
+{% include header.html %}
+{% if page.homepage %}{% include nav-home.html %}{% else %}{% include nav.html %}{% endif %}
+  <div id="content">
+  {{ content }}
+  </div>
+</body>
 {% include footer.html %}
 {% if page.map %}
 <!--maps-->
