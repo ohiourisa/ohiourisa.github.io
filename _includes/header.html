@@ -6,7 +6,7 @@
           <h1 style="font-size:45px;">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}{% endif %}</h1>
           <h5 class="wow fadeIn text-normal">{% if page.subtitle %}{{ page.subtitle }}{% else %}&nbsp;{% endif %}</h5>
           <hr>
-          <a href="#content" class="btn btn-primary-outline btn-lg page-scroll wow fadeInUp">Learn More</a>
+          {% if page.homepage == 'true' %}<a href="#content" class="btn btn-primary-outline btn-lg page-scroll wow fadeInUp">Learn More</a>{% endif %}
         </div>
       </li>
       {% if post.title %}{% assign title = post.title %}{% elsif page.title %}{% assign title = page.title %}{% endif %}
