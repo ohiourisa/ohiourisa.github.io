@@ -1,4 +1,4 @@
-name: Ohio URISA
+name: Ohio Chapter of URISA
 url: ""
 baseurl: "https://ohiourisa.github.io"
 permalink: /:categories/:title/index.html
@@ -8,7 +8,10 @@ header-img: world-large-inv-2.png
 logo: ohurisa-logo.png
 future: true
 twitter: ohiourisa
-facebook:
+github: ohiourisa
+facebook: 216028668491458
+address: "PO BOX 282148"
+city: "Columbus, OH 43228"
 include:
   - _pages
 exclude:

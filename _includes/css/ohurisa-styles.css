@@ -9,7 +9,9 @@ p {
   margin-bottom: 20px;
   font-family: 'Open Sans',Arial,sans-serif;
 }
-
+#eventBanner {
+  text-transform: uppercase;
+}
 /*mailchimp embed styles*/
 #mc_embed_signup {
   background: #fff;

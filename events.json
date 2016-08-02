@@ -6,9 +6,10 @@
     "title": "{{ event.title | xml_escape }}",
     "subtitle": "{{ event.location | xml_escape }}",
     "keywords": "{{ event.keywords | xml_escape }}",
-    "event-id": "{{ event.eventbright-id | xml_escape }}",
-    "dateString": "{{ event.date | date: "%Y%m%d%H%m%S" }}",
+    "eventbright": "{{ event.eventbright-id | xml_escape }}",
+    "location": "{{ event.location | xml_escape }}",
     "date": "{{ event.date }}",
+    "featured": {% if event.featured == true %}"true",{% else %}"false",{% endif %}
     "url": "{{ event.url | xml_escape }}"
   }{% unless forloop.last %},{% endunless %}{% endfor %}
 ]

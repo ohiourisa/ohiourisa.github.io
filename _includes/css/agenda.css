@@ -16,7 +16,7 @@
 
 
 /* Times */
-.agenda .agenda-time { width: 140px; }
+.agenda .agenda-time { text-transform: uppercase; width: 140px; }
 
 
 /* Events */

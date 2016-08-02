@@ -1,6 +1,6 @@
 ---
 layout: default
-title: future
+title: A Future Event
 category: events
 date: 2016-10-01 17:00:00 -0400
 location: Park St. Cantina

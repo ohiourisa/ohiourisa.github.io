@@ -11,13 +11,13 @@
   <meta name="twitter:site" content="@ohiourisa">
   <meta name="twitter:creator" content="@ohiourisa">
   <!--Open Graph meta data-->
-  <meta property="og:site_name" content="Ohio URISA" />
+  <meta property="og:site_name" content="Ohio Chapter of URISA" />
   <meta property="og:title" content="Ohio URISA" />
   <meta propety="og:type" content="website" />
   <meta property="og:image" content="/img/world-large-inv-2.png" />
   <meta property="og:description" content="Ohio URISA Homepage - An officially recognized association of GIS Professionals in Ohio" />
   <link property="og:url" content="//" />
-  <title>Ohio URISA | Ohio URISA</title>
+  <title>Ohio URISA | Ohio Chapter of URISA</title>
   <!-- end meta details-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <!--Bootstrap 4-->
@@ -87,7 +87,7 @@
     <div class="site-logo-wrapper">
       <a class="page-scroll" href="#top"><img class="site-logo" src="/img/ohurisa-logo.png" /></a>
       <span class="call-to-action site-logo header-button">
-        <a href="#events" class="btn btn-danger-outline btn-sm text-uppercase page-scroll" style="visibility: visible; animation-name: flipInX;">Next Event Oct 1</a>
+        <a href="#events" id="eventBanner" class="btn btn-danger-outline btn-sm text-uppercase page-scroll" style="visibility: visible; animation-name: flipInX;"></a>
       </span>
     </div>
     <!--a class="navbar-brand page-scroll" href="#first">Ohio Chapter of URISA</a-->
@@ -162,9 +162,9 @@
   Get ready for some great GIS Events!
 </p>
 
-<div class="alert alert-warning">
-  <h4>Featured Event</h4>
-  <p>This could be a featured event</p>
+<div class="alert alert-warning" id="featuredEvent">
+  <h4>&nbsp;</h4>
+  <p>&nbsp;</p>
 </div>
 
 <hr />
@@ -180,46 +180,10 @@
         </tr>
       </thead>
       <tbody id="eventsTable">
-        <!-- Jekyll Loop for events from post event category - Single event in a single day -->
-        <!-- Multiple events in a single day (note the rowspan) -->
-        <!--tr>
-          <td class="agenda-date" class="active" rowspan="3">
-            <div class="dayofmonth">24</div>
-            <div class="dayofweek">Thursday</div>
-            <div class="shortdate text-muted">July, 2014</div>
-          </td>
-          <td class="agenda-time">
-            8:00 - 9:00 AM
-          </td>
-          <td class="agenda-events">
-            <div class="agenda-event">
-              Mapping
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="agenda-time">
-            10:15 AM - 12:00 PM
-          </td>
-          <td class="agenda-events">
-            <div class="agenda-event">
-              Reboot cause ArcMap crashed
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="agenda-time">
-            7:00 - 9:00 PM
-          </td>
-          <td class="agenda-events">
-            <div class="agenda-event">
-              Do some coding before bed
-            </div>
-          </td>
-        </tr-->
+        <!--updated via javascript from json created via jekyll-->
       </tbody>
     </table>
-    <span><a href="/events/">Click here</a> for the events archive. Event search is coming...</span>
+    <span><a href="/#events">Click here</a> for the events archive, coming soon...</span>
   </div>
 </div>
 
@@ -539,7 +503,7 @@
   <div class="container text-center">
     <div class="call-to-action">
       <h2 class="text-primary">Membership</h2>
-      <a data-toggle="modal" href="#aboutModal" class="btn btn-primary-outline btn-lg wow flipInX text-uppercase">Join Here</a>
+      <a href="https://drive.google.com/file/d/0B_4l5xNSLTw2M1BmUGw2Y2dfVkk/view" class="btn btn-primary-outline btn-lg wow flipInX text-uppercase" target="_blank">Join Here</a>
     </div>
     <!--br>
     <hr>
@@ -571,10 +535,10 @@
       <div class="col-lg-8 col-lg-offset-2 text-center">
         <h2 class="margin-top-0 wow fadeIn">Get in Touch</h2>
         <hr class="primary">
-        <p>We love feedback. Fill out the form below and we'll get back to you as soon as possible. *This wont work on this demo Dropbox page.</p>
+        <p>We love feedback. Fill out the form below and we'll get back to you as soon as possible.</p>
       </div>
       <div class="col-lg-10 col-lg-offset-1 text-center">
-        <form class="contact-form row" action="https://formspree.io/mmeyer@ovrdc.org" method="POST">
+        <form class="contact-form row" action="https://formspree.io/webmaster@ohurisa.org" method="POST">
           <div class="col-md-6">
             <label></label>
             <input type="text" class="form-control" name="name" placeholder="Name">
@@ -656,28 +620,24 @@
       <div class="col-xs-12 col-sm-3">
         <h6 class="text-uppercase">About</h6>
         <ul class="list-unstyled">
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Delivery Information</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">By Laws</a></li>
           <li><a href="demo">Site Demo</a></li>
+          <li>Other Links</li>
         </ul>
       </div>
       <div class="col-xs-12 col-sm-3">
-        <h6 class="text-uppercase">Ohio URISA</h6>
+        <h6 class="text-uppercase">Ohio Chapter of URISA</h6>
         <ul class="list-unstyled">
-          <li><a href="#">123 Main St</a></li>
-          <li><a href="#">Columbus, Ohio</a></li>
-          <li><a href="#">contact@ohurisa.org</a></li>
-          <li><a href="#">123-456-7890</a></li>
+          <li><a href="#">PO BOX 282148</a></li>
+          <li><a href="#">Columbus, OH 43228</a></a></li>
         </ul>
       </div>
       <div class="col-xs-12 col-sm-3">
         <h6 class="text-uppercase">Updates</h6>
         <form>
-          <div class="form-group">
+          <!--div class="form-group">
             <input type="text" class="form-control" title="No spam, we promise!" placeholder="Email">
-          </div>
+          </div-->
           <div class="form-group">
             <button class="btn btn-primary" data-toggle="modal" data-target="#emailModal" type="button">Subscribe</button>
           </div>
@@ -686,8 +646,9 @@
       <div class="col-xs-12 col-sm-3 text-right">
         <h6 class="text-uppercase">Follow</h6>
         <ul class="list-inline">
-          <li><a rel="nofollow" href="" title="Twitter"><i class="icon-md ion-social-twitter-outline"></i></a>&nbsp;</li>
-          <li><a rel="nofollow" href="" title="Facebook"><i class="icon-md ion-social-facebook-outline"></i></a></li>
+          <li><a rel="nofollow" href="https://github.com/ohiourisa" title="GitHub" target="_blank"><i class="icon-md ion-social-github-outline"></i></a></li>
+          <li><a rel="nofollow" href="https://twitter.com/ohiourisa" title="Twitter" target="_blank"><i class="icon-md ion-social-twitter-outline"></i></a>&nbsp;</li>
+          <li><a rel="nofollow" href="https://www.facebook.com/216028668491458" title="Facebook" target="_blank"><i class="icon-md ion-social-facebook-outline"></i></a></li>
         </ul>
       </div>
     </div>
@@ -788,54 +749,67 @@ var settings = {
 
 $.ajax(settings).done(function (event) {
   /////////////////////
-  console.log(event);
-  var now = moment().format('YYYYMMDDHHmmss');
-  console.log(now)
-  console.log(event[2].dateString);
-  var content;
-  var currentEvents = [];
-  for (i=0; i < event.length; i++) {
-    if (event[i].dateString) {
-      currentEvents.push({
-        title: event[i].title,
-        date: event[i].date
-      });
-    }
-  }
-  for (x in currentEvents) {
-    var title = currentEvents[x].title;
-    $('#eventsTable').append(title);
-    
-  }
+  //console.log(event);
 
-  /*for (x=0; (count > 1) && (x < currentEvents.length); x++) {
-    content += currentEvents[x].date + '<br />';
-    var day, month, year, time, title, location, id;
-    id = event[i].eventbright-id;
-    var date = event[i].date;
-    console.log(moment(date).isValid());
-    day = moment().format(date, "DD");
-    console.log(day);
-    month = moment().format(date, "MM");
-    content += '<tr> \
-              <td class="agenda-date" class="active" rowspan="1"> \
-                <div class="dayofmonth">'+ day + '</div> \
-                <div class="dayofweek"></div> \
-                <div class="shortdate text-muted">' + month + '</div> \
-              </td> \
-              <td class="agenda-time"> \
-                 \
-              </td> \
-              <td class="agenda-events"> \
-                <div class="agenda-event"> \
-                  '+ event[i].title + ' \
-                </div> \
-                <div class="text-muted">' + event[i].location + '</div> \
-                <span><a href="https://www.eventbrite.com/e/' + id +'" target="_blank">More Info</a></span> \
-              </td> \
-            </tr>'
-      $('#eventsTable').append(content);
-    }*/
+  var months = [
+    "Jan", "Feb", "March",
+    "April", "May", "June", "July",
+    "Aug", "Sept", "Oct",
+    "Nov", "Dec"
+  ];
+  var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+  //counters to limit event table propogation
+  var y = 0,
+  z = 0;
+  x = 0;
+  var now = new Date();
+
+  var eventsListing = "";
+  var featuredTxt = "";
+  var bannerTxt = "";
+
+  for (var i=0; i < event.length; i++) {
+      //console.log(event.length);
+      var d = new Date(event[i].date);
+      var id = event[i].eventbright;
+      var dd = d.getDate();
+      var day = d.getDay();
+      var mm = d.getMonth(); //January is 0!
+      var year = d.getFullYear();
+      var time = moment(d).format("h:mm a");
+      if (d >= now && z < 1 && event[i].featured == 'true') {
+        featuredTxt += '<h4>' + event[i].title + '</h4><p>' + event[i].subtitle + '</p>'
+        x = x + 1;
+        $('#featuredEvent').html(featuredTxt);
+      }
+      if (d >= now && y < 1) {
+        eventBanner += '<h4>' + event[i].title + '</h4><p>' + event[i].subtitle + '</p>'
+        y = y + 1;
+        $('#eventBanner').append('Next Event ' + months[mm] + '&nbsp;' + dd);
+      }
+      if (d >= now && z < 4) {
+        eventsListing += '<tr> \
+                  <td class="agenda-date" class="active" rowspan="1"> \
+                    <div class="dayofmonth">'+ dd + '</div> \
+                    <div class="dayofweek">' + days[day] + '</div> \
+                    <div class="shortdate text-muted">' + months[mm] + ', ' + year + '</div> \
+                  </td> \
+                  <td class="agenda-time">' + time + ' \
+                     \
+                  </td> \
+                  <td class="agenda-events"> \
+                    <div class="agenda-event"> \
+                      '+ event[i].title + ' \
+                    </div> \
+                    <div class="text-muted">' + event[i].location + '</div> \
+                    <span><a href="https://www.eventbrite.com/e/' + id +'" target="_blank">More Info</a></span> \
+                  </td> \
+                </tr>'
+        z = z+1;
+      }
+  }
+  $('#eventsTable').append(eventsListing);
 });
 </script>
 

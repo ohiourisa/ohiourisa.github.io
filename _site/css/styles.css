@@ -298,7 +298,7 @@ img::-moz-selection {
 
 
 /* Times */
-.agenda .agenda-time { width: 140px; }
+.agenda .agenda-time { text-transform: uppercase; width: 140px; }
 
 
 /* Events */
@@ -598,7 +598,9 @@ p {
   margin-bottom: 20px;
   font-family: 'Open Sans',Arial,sans-serif;
 }
-
+#eventBanner {
+  text-transform: uppercase;
+}
 /*mailchimp embed styles*/
 #mc_embed_signup {
   background: #fff;
