@@ -13,44 +13,140 @@ plugins:
 <section>
   <div class="container wow fadeInUp">
     <div class="text-center">
-      <h2>About Ohio URISA</h2>
+      <h2 class="display-1">About Ohio URISA</h2>
       <p class="lead"></p>
       <p>
     </div>
       <p>We are the officially recognized chapter of URISA for the State of Ohio. The <a href="http://www.urisa.org/" target="_blank">Urban and Regional Information Systems Association (URISA)</a> is a nonprofit association of professionals using Geographic
       Information Systems (GIS) and other information technologies to solve challenges in state/provincial, regional and local government agencies. URISA is considered to be the premier organization for the use and integration of spatial information.
-      As a chapter, our objectives are:
       </p>
-    <ul>
+      <div class="card">
+        <h4 class="card-header">Objectives</h4>
+        <div class="card-block">
+          <p class="card-text">
+            To encourage the advancement of GIS in the State of Ohio through professional education and public awareness.
+          </p>
+          <p class="card-text">
+            To foster the exchange of ideas and provide a forum of discussion on topics related to GIS in the State.
+          </p>
+          <p class="card-text">
+            To promote professional interaction within the state GIS community, stimulate research, encourage publication, and generally aid the advancement of its members and other organizations having related objectives.
+          </p>
+        </div>
+      </div>
+    <!--ul>
       <li>To encourage the professional advancement of GIS in the State of Ohio through professional education and public awareness.</li>
       <li>To foster the exchange of ideas and provide a forum of discussion on topics related to GIS in the State.</li>
       <li>To promote professional interaction within the state GIS community, stimulate research, encourage publication, and generally aid the advancement of its members and other organizations having related objectives.</li>
-    </ul>
-    <p>
-      In 2010, the Chapter had 111 members. There were 42 members who were a part of six corporate memberships, and 69 members who joined individually. Always check the calendar for the latest meeting information. Generally, we hold regular meetings on the
-      last Monday of every month at 12:30 p.m. at the ODOT Office Building at 1980 W. Broad Street, Columbus, Ohio 43223. The OGRIP Forum meetings are usually held on the same day starting at 1 p.m. in the same room. From time to time we also schedule
-      outreach meetings in various parts of the state. Our meetings are usually filled with discussions of activities we can undertake to benefit the GIS community in Ohio and to grow our organization. You can earn points towards the GISP certification
-      for years of membership toward the Contributions to the Profession Component. Additionally, attending Chapter activities may earn points under the EDU-3 section. For questions or more information, contact the Chapter’s GISP Liaison or check out
-      the GISCI website.
-    </p>
+    </ul-->
+    <!--button class="btn btn-sm text-normal btn-secondary-outline" data-toggle="collapse" data-target="#demo" style="width:100%;">Learn More</button>
+
+    <div id="demo" class="collapse"-->
+      <p>
+        In 2010, the Chapter had 111 members. There were 42 members who were a part of six corporate memberships, and 69 members who joined individually. Always check the calendar for the latest meeting information. Generally, we hold regular meetings on the
+        last Monday of every month at 12:30 p.m. at the ODOT Office Building at 1980 W. Broad Street, Columbus, Ohio 43223. The OGRIP Forum meetings are usually held on the same day starting at 1 p.m. in the same room. From time to time we also schedule
+        outreach meetings in various parts of the state. Our meetings are usually filled with discussions of activities we can undertake to benefit the GIS community in Ohio and to grow our organization. You can earn points towards the GISP certification
+        for years of membership toward the Contributions to the Profession Component. Additionally, attending Chapter activities may earn points under the EDU-3 section. For questions or more information, contact the Chapter’s GISP Liaison or check out
+        the GISCI website.
+      </p>
+
   </div>
 </section>
  <section id="events" class="bg-alt">
   <div class="container">
     <div class="center-block">
-      {% include events.html %}
-    </div>
+      <div class="text-center">
+        <h2 class="display-1">Upcoming Events</h2>
+        <p class="lead">
+        </p>
+      </div>
+
+      <div class="alert alert-warning" id="featuredEvent">
+        <h4>&nbsp;</h4>
+        <p>&nbsp;</p>
+      </div>
+
+      <hr />
+
+      <div class="agenda" id="events">
+        <div class="table-responsive">
+          <table class="table table-condensed table-bordered">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Event</th>
+              </tr>
+            </thead>
+            <tbody id="eventsTable">
+              <!--updated via javascript from json created via jekyll-->
+            </tbody>
+          </table>
+          <span><a href="{{ site.baseurl }}/#events">Click here</a> for the events archive, coming soon...</span>
+        </div>
+      </div>    </div>
   </div>
 </section>
 <section id="news">
   <div class="container wow fadeInUp">
-    <div class="text-center">
-      <h2>Recent News</h2>
+    <!--div class="text-center">
+      <h2>From the Blog</h2>
       <p class="lead">
-        Here are some recent news items!
-      </p></div>
-    <div class="card-group">
-      <!-- card -->
+
+      </p>
+    </div-->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <div class="jumbotron jumbotron-fluid" style="background-color: white;">
+            <div class="container">
+              <h1 class="display-1">News Item 1</h1>
+              <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="jumbotron jumbotron-fluid" style="background-color: white;">
+            <div class="container">
+              <h1 class="display-1">News Item 2</h1>
+              <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="jumbotron jumbotron-fluid" style="background-color: white;">
+            <div class="container">
+              <h1 class="display-1">News Item 3</h1>
+              <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev" style="background: none;">
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next" style="background: none;">
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div class="jumbotron jumbotron-fluid" style="background-color: white;">
+      <div class="container">
+        <h1 class="display-1">Fluid jumbotron</h1>
+        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+      </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid" style="background-color: white;">
+      <div class="container">
+        <h1 class="display-1">Fluid jumbotron</h1>
+        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+      </div>
+    </div>
+    <!--div class="card-group">
       <div class="card">
         <img class="card-img-top img-responsive" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample13.jpg" alt="Card image cap">
         <div class="card-block">
@@ -58,7 +154,6 @@ plugins:
           <p class="card-text">This is a short description.</p>
         </div>
       </div>
-      <!-- card -->
       <div class="card">
         <img class="card-img-top img-responsive" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample19.jpg" alt="Card image cap">
         <div class="card-block">
@@ -66,21 +161,20 @@ plugins:
           <p class="card-text">Use card groups to render equal height cards without gutters between the cards. Use <code>.card-deck</code> for cards that aren�t attached to each another.</p>
         </div>
       </div>
-      <!-- card -->
       <div class="card">
         <img class="card-img-top img-responsive" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample14.jpg" alt="Card image cap">
         <div class="card-block">
           <h4 class="card-title">News Item 3</h4>
           <p class="card-text">A frequent problem occurs when you have multiple items in a row with content of varying height. Thanks to flexbox (and display:table) we now have equal height cards!</p>
         </div>
-      </div>
+      </div-->
   </div>
 </section>
 <section id="projects" class="bg-alt">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="m-t-0 text-primary">Projects</h2>
+        <h2 class="m-t-0 text-primary display-1">Projects</h2>
         <hr class="primary">
       </div>
     </div>
@@ -347,14 +441,14 @@ plugins:
 <section id="user-groups" class="bg-alt leaflet-map" style="padding:70px 0 0 0;">
   <div id="map" class="center-block" style="width:100%;height:600px;position:realtive;padding:15px 0;">
     <div class="text-center" style="z-index:800;position:relative;margin: auto 40px;">
-      <h2 class="margin-top-0 wow fadeIn">Ohio GIS User Groups</h2>
+      <h2 class="margin-top-0 wow fadeIn display-1">Ohio GIS User Groups</h2>
       <hr class="light" /></div>
   </div>
 </section>
-<aside class="bg-alt" id="connect" style="padding: 100px 0 40px;">
+<aside class="bg-alt" id="connect" style="padding: 100px 0;">
   <div class="container text-center">
     <div class="call-to-action">
-      <h2 class="text-primary">Membership</h2>
+      <h2 class="text-primary display-1">Membership</h2>
       <a href="https://drive.google.com/file/d/0B_4l5xNSLTw2M1BmUGw2Y2dfVkk/view" class="btn btn-primary-outline btn-lg wow flipInX text-uppercase" target="_blank">Join Here</a>
     </div>
     <!--br>
@@ -385,7 +479,7 @@ plugins:
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 text-center">
-        <h2 class="margin-top-0 wow fadeIn">Get in Touch</h2>
+        <h2 class="margin-top-0 wow fadeIn display-1">Get in Touch</h2>
         <hr class="primary">
         <p>We love feedback. Fill out the form below and we'll get back to you as soon as possible.</p>
       </div>

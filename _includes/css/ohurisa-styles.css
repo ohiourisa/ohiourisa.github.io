@@ -5,20 +5,29 @@ header {
   height: 40%;
   padding-top: 10%
 }
+header .header-content .inner h1 {
+  margin-bottom: 10px;
+}
 p {
   font-size: 17px;
   line-height: 1.7;
   margin-bottom: 20px;
   font-family: 'Open Sans',Arial,sans-serif;
 }
-#eventBanner {
-  text-transform: uppercase;
-}
 hr.style-six {
     border: 0;
     height: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+#eventBanner {
+  text-transform: uppercase;
+}
+.carousel-indicators li {
+  border: 1px solid #001a33;
+}
+.display-1 {
+  font-size: 3rem;
 }
 /*mailchimp embed styles*/
 #mc_embed_signup {
@@ -61,11 +70,20 @@ hr.style-six {
     display: block;
   }
 }
+@media (max-width: 768px) {
+  .slider-title,
+  .display-1 {
+    font-size: 40px;
+  }
+}
 /*end flexslider tweaks*/
 .feature {
   padding: 40px 0;
 }
 /*custom leaflet maps*/
+.leaflet-popup-content-wrapper {
+  border-radius: .3rem;
+}
 .leaflet-container a {
   color: #007FFF;
 }

@@ -57,7 +57,7 @@ usergroups.on('click', function(e) {
   for (var i = 0; i < layer.length; i++) {
     //console.log(layer[i]);
     prop = layer[i].feature.properties;
-    popupContent += '<a href="' + prop.url + '" target="_blank"><h4>' + layer[i].feature.properties.usergroups + '</h4></a>';
+    popupContent += '<a href="' + prop.url + '" target="_blank"><h5>' + layer[i].feature.properties.usergroups + '</h5></a>';
     /*var array = [];
     for (x in layer[i]._latlngs) {
       array.push([layer[i]._latlngs[x].lat, layer[i]._latlngs[x].lng])
