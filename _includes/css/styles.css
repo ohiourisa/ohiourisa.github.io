@@ -199,7 +199,7 @@ header .header-content .inner p {
     }
     header {
         /*min-height: 100%;*/
-        min-height: 50%;
+        min-height: 65%;
     }
     header .header-content {
         position: absolute;
