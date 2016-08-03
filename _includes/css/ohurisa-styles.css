@@ -2,6 +2,8 @@ header {
   color: #001A33;
 	background-image: url('../img/world-large-inv-2.png');
 	background-size: cover;
+  height: 40%;
+  padding-top: 10%
 }
 p {
   font-size: 17px;
@@ -12,11 +14,22 @@ p {
 #eventBanner {
   text-transform: uppercase;
 }
+hr.style-six {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
 /*mailchimp embed styles*/
 #mc_embed_signup {
   background: #fff;
   clear: left;
   font: 14px Helvetica, Arial, sans-serif;
+}
+@media (max-width: 544px) {
+  .social {
+    text-align: left!important;
+  }
 }
 /*flexslider tweaks*/
 .flexslider .flex-control-paging li a.flex-active {
@@ -33,12 +46,20 @@ p {
   height: 4rem;
 }
 .flex-control-nav {
-  position: relative;;
+  position: relative;
+}
+.flex-direction-nav {
+  display: none;
 }
 .flexslider.urisa-slider {
   background: transparent;
   border: none;
   height: 20%;
+}
+@media (min-width: 544px) {
+  .flex-direction-nav {
+    display: block;
+  }
 }
 /*end flexslider tweaks*/
 .feature {
@@ -54,7 +75,7 @@ p {
 .leaflet-container {
   font: 12px/1.5 'Montserrat','Helvetica Neue', Arial, Helvetica, sans-serif;
 }
-@media (max-height: 680px){
+@media (max-height: 750px){
   #map,
   .leaflet-map  {
     height: 300px!important;

@@ -6,9 +6,10 @@
           <h1 style="font-size:40px;">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}{% endif %}</h1>
           <h5 class="wow fadeIn text-normal">{% if page.subtitle %}{{ page.subtitle }}{% else %}&nbsp;{% endif %}</h5>
           <hr>
-          <a href="#content" class="btn btn-primary-outline btn-lg page-scroll wow fadeInUp">Learn More</a>
+          {% if page.slider == true %}<a href="#content" class="btn btn-primary-outline btn-lg page-scroll wow fadeInUp">Learn More</a>{% endif %}
         </div>
       </li>
+      {% if page.slider == true %}
       {% if post.title %}{% assign title = post.title %}{% elsif page.title %}{% assign title = page.title %}{% endif %}
       {% assign counter = 0 %}
       {% assign maxPostCount = 3 %}
@@ -26,6 +27,7 @@
       </li>
       {% endif %}
       {% endfor %}
+      {% endif %}
     </ul>
   </div>
 </header>

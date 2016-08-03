@@ -27,7 +27,7 @@
           </div>
         </form>
       </div>
-      <div class="col-xs-12 col-sm-3 text-right">
+      <div class="col-xs-12 col-sm-3 text-right social">
         <h6 class="text-uppercase">Follow</h6>
         <ul class="list-inline">
           <li><a rel="nofollow" href="https://github.com/{{site.github}}" title="GitHub" target="_blank"><i class="icon-md ion-social-github-outline"></i></a></li>
@@ -76,6 +76,12 @@ var settings = {
   "method": "GET",
   "headers": {}
 }
+
+$('#search').click(function() {
+  setTimeout(function() { document.getElementById('search-input').focus();
+  //console.log('timer');
+  }, 500);
+})
 
 $.ajax(settings).done(function (event) {
   /////////////////////

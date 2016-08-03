@@ -1,6 +1,7 @@
 ---
 layout: default
 title: A Future Event
+subtitle: Get Ready for an Awesome Event
 category: events
 date: 2016-10-01 17:00:00 -0400
 location: Park St. Cantina
