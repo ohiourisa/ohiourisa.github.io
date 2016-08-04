@@ -13,17 +13,18 @@
 {% include nav.html %}
 <div id="content">
   <section>
-    <div class="container wow fadeIn">
+    <div class="container wow fadeInUp">
         {{ content}}
   </section>
 </div>
 {% endif %}
 </body>
 {% include footer.html %}
-{% if page.map %}
-<!--maps-->
+{% if page.homepage == true %}<script>
+{% include js/events.js %}
+</script>{% endif %}
+{% if page.map %}<!--map script-->
 <script>
 {% include {{ page.map }} %}
-</script>
-{% endif %}
+</script>{% endif %}
 </html>

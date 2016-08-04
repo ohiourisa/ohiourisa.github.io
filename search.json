@@ -7,7 +7,7 @@
     "subtitle": "{{ post.subtitle | xml_escape }}",
     "category": "{{ post.category | xml_escape }}",
     "keywords": "{{ post.keywords | xml_escape }}",
-  "location": "{{ post.location | xml_escape }}",
+    "location": "{{ post.location | xml_escape }}",
     "url": "{{ post.url | xml_escape }}"
   },{% endif %}{% endfor %}{% for page in site.pages %}{% if page.title %}
   {

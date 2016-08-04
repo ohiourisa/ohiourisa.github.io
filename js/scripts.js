@@ -1,6 +1,8 @@
 ---
 permalink: js/scripts.js
 ---
+//moment.js
+{% include js/moment.min.js %}
 //scroll
 {% include js/scroll.js %}
 //flexslider

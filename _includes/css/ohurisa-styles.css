@@ -73,7 +73,7 @@ hr.style-six {
 @media (max-width: 768px) {
   .slider-title,
   .display-1 {
-    font-size: 40px;
+    font-size: 35px;
   }
 }
 /*end flexslider tweaks*/
@@ -110,9 +110,6 @@ hr.style-six {
 }
 .navbar-nav.pull-right {
 	padding-top: 10px;
-}
-.header-content .inner h1 {
-	font-size: 45px;
 }
 .icon-md {
 	font-size: 30px;
@@ -160,6 +157,11 @@ footer a:focus {
   text-decoration: none;
 }
 /*media queries*/
+@media (min-width: 34em) {
+  header .header-content .inner {
+    max-width: 1200px;
+  }
+}
 @media (max-width:990px) {
 	.header-button {
     margin-top: 1rem;

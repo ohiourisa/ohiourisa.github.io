@@ -34,9 +34,39 @@ var usergroups = new L.geoJson(null, {
   style: defaultStyle,
 }).addTo(map);
 
-$.getJSON( "/gis-data/ohiourisa_gis_ugs_simple_geojson.json", function( data ) {
-  var usergroupData = new L.geoJson(data);
+//csv join function
+function csvJoin(properties, csvTable, key) {
+  var keyVal = properties[key];
+  console.log(keyVal);
+  //console.log(csvTable[0][keyVal])
+  var match = {};
+  for (var i = 0; i < csvTable.length; i++) {
+    if (csvTable[i][key] === keyVal) {
+      match = csvTable[i];
+      //console.log(match);
+      for (key in match) {
+        //console.log(key);
+        properties[key] = match[key];
+      }
+    }
+  }
+}
+
+$.getJSON( "/gis-data/ohiourisa_gis_ugs_simple_geojson.json", function(geojson) {
+  var usergroupData = new L.geoJson(geojson);
   usergroups.addData(usergroupData.toGeoJSON());
+  Papa.parse("/gis-data/ohiourisa_gis_ugs_table.csv", {
+    download: true,
+    header: true,
+    skipEmptyLines: true,
+    complete: function(table) {
+      //console.log(table.data);
+      usergroups.eachLayer(function(layer) {
+        csvJoin(layer.feature.properties, table.data, 'usergroups')
+      });
+      console.log(usergroups);
+    }
+  })
 });
 
 map.on('click', function() {
@@ -58,7 +88,9 @@ usergroups.on('click', function(e) {
     //console.log(layer[i]);
     prop = layer[i].feature.properties;
     popupContent += '<a href="' + prop.url + '" target="_blank"><h5>' + layer[i].feature.properties.usergroups + '</h5></a>';
-    /*var array = [];
+    /*
+    //attempt to get the centroid of a polygon --from google--
+    var array = [];
     for (x in layer[i]._latlngs) {
       array.push([layer[i]._latlngs[x].lat, layer[i]._latlngs[x].lng])
     }

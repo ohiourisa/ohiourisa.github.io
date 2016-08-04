@@ -16,3 +16,11 @@ include:
   - _pages
 exclude:
   - node_modules
+#sets default frontmatter settings
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "default"
