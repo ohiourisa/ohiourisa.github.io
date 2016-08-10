@@ -14,6 +14,7 @@ p {
   margin-bottom: 20px;
   font-family: 'Open Sans',Arial,sans-serif;
 }
+img { max-width: 100%; }
 hr.style-six {
     border: 0;
     height: 0;
