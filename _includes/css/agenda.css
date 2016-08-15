@@ -1,4 +1,6 @@
-.agenda {  }
+.agenda {
+  margin-bottom: 2rem;
+}
 
 /* Dates */
 .agenda .agenda-date { width: 170px; }

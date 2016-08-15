@@ -3,7 +3,7 @@ layout: default
 title: Ohio URISA
 headline: Welcome to the Ohio Chapter of URISA
 subtitle: An officially recognized association of GIS Professionals in Ohio
-map: maps/homepage-map.js
+map: maps/user-groups-map.js
 homepage: true
 plugins:
   - >-
@@ -42,11 +42,14 @@ published: true
         </div>
       </div>
     <div class="text-center">
-      <p><a href="/about" class="btn btn-primary-outline btn-lg wow flipInX text-uppercase" target="_blank"><i class="icon-sm ion-share wow fadeIn" data-wow-delay=".1s"></i>About</a>
+      <p>
+        <a href="/about" class="btn btn-primary-outline btn-lg wow flipInX text-uppercase"><i class="icon-sm ion-share wow fadeIn" data-wow-delay=".1s"></i>&nbsp;About</a>
       </p>
-    <em>Read more at Ohio URISA on our About page</em>
+      <p class="text-muted">
+        Read more at Ohio URISA on our About page
+      </p>
     </div>
-    
+
     <!--ul>
       <li>To encourage the professional advancement of GIS in the State of Ohio through professional education and public awareness.</li>
       <li>To foster the exchange of ideas and provide a forum of discussion on topics related to GIS in the State.</li>
@@ -66,39 +69,7 @@ published: true
   </div>
 </section>
  <section id="events" class="bg-alt">
-  <div class="container">
-    <div class="center-block">
-      <div class="text-center">
-        <h2 class="display-1">Upcoming Events</h2>
-        <p class="lead">
-        </p>
-      </div>
-
-      <div class="alert alert-warning" id="featuredEvent">
-        <h4>&nbsp;</h4>
-        <p>&nbsp;</p>
-      </div>
-
-      <hr />
-
-      <div class="agenda" id="events">
-        <div class="table-responsive">
-          <table class="table table-condensed table-bordered">
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Time</th>
-                <th>Event</th>
-              </tr>
-            </thead>
-            <tbody id="eventsTable">
-              <!--updated via javascript from json created via jekyll-->
-            </tbody>
-          </table>
-          <span><a href="{{ site.baseurl }}/#events">Click here</a> for the events archive, coming soon...</span>
-        </div>
-      </div>    </div>
-  </div>
+  {% include events.html %}
 </section>
 <section id="news">
   <div class="container wow fadeInUp">
@@ -459,7 +430,15 @@ published: true
           <h2 class="margin-top-0 wow fadeIn display-1">Ohio GIS User Groups</h2>
           <hr class="light" />
         </div>
-        <div id="map" class="center-block wow fadeInUp" style="width:100%;height:600px;position:realtive;padding:15px 0;border: 1px solid lightgray;">
+        <div id="map" class="center-block wow fadeInUp" style="width:100%;height:600px;position:realtive;padding:15px 0;border: 1px solid lightgray;margin-bottom:2rem;">
+        </div>
+        <div class="text-center">
+          <p>
+            <a href="/user-groups-fullscreen-map" target="ext" class="btn btn-primary-outline btn-lg wow flipInX text-uppercase"><i class="icon-sm ion-share wow fadeIn" data-wow-delay=".1s"></i>&nbsp;User Group Map</a>
+          </p>
+          <p class="text-muted">
+            Click the Link Above for a Fullscreen Map
+          </p>
         </div>
       </div>
     </div>

@@ -1,9 +1,10 @@
 var map = L.map('map', {
     center: [40.355,-82.656],
     zoom: 7,
+    {% if page.app != true %}
     scrollWheelZoom: false,
     touchZoom: false,
-    fullscreenControl: true,
+    {% endif %}
 });
 
 var cdblight = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {

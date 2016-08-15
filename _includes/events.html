@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="center-block">
+    {% if page.homepage %}
+    <div class="text-center">
+      <h2 class="display-1">Upcoming Events</h2>
+      <p class="lead">
+      </p>
+    </div>
+    {% endif %}
+    <div class="alert alert-warning" id="featuredEvent">
+      <h4>&nbsp;</h4>
+      <p>&nbsp;</p>
+    </div>
+    <hr />
+    <div class="agenda" id="events">
+      <div class="table-responsive">
+        <table class="table table-condensed table-bordered">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Event</th>
+            </tr>
+          </thead>
+          <tbody id="eventsTable">
+            <!--updated via javascript from json created via jekyll-->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {% if page.homepage %}
+    <div class="text-center">
+      <p>
+        <a href="/events" class="btn btn-primary-outline btn-lg wow flipInX text-uppercase"><i class="icon-sm ion-share wow fadeIn" data-wow-delay=".1s"></i>&nbsp;Events</a>
+      </p>
+      <p class="text-muted">
+        Learn More on our Events Page
+      </p>
+    </div>
+    {% endif %}
+  </div>
+</div>

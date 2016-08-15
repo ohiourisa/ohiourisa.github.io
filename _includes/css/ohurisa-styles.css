@@ -30,6 +30,9 @@ hr.style-six {
 .display-1 {
   font-size: 3rem;
 }
+.card {
+  margin-bottom: 2rem;
+}
 /*mailchimp embed styles*/
 #mc_embed_signup {
   background: #fff;

@@ -9,3 +9,5 @@ permalink: js/scripts.js
 {% include js/jquery.flexslider-min.js %}
 //search
 {% include js/jekyll-search.js %}
+//events
+{% include js/events.js %}

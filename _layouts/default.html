@@ -2,6 +2,15 @@
 <html>
 {% include head.html %}
 {% if page.homepage == true %}<style>header{min-height:100%;!important}</style>{% endif%}
+{% if page.app == true %}
+<body>
+  {{ content }}
+</body>
+{% if page.map %}<!--map script-->
+<script>
+{% include {{ page.map }} %}
+</script>{% endif %}
+{% else %}
 <body class="bg-faded">
 {% include header.html %}
 {% if page.homepage %}
@@ -20,11 +29,9 @@
 {% endif %}
 </body>
 {% include footer.html %}
-{% if page.homepage == true %}<script>
-{% include js/events.js %}
-</script>{% endif %}
 {% if page.map %}<!--map script-->
 <script>
 {% include {{ page.map }} %}
 </script>{% endif %}
+{% endif %}
 </html>

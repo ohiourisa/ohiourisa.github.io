@@ -16,5 +16,5 @@
     "keywords": "{{ page.keywords | xml_escape }}",
     "url": "{{ page.url | remove:'index.html' | xml_escape }}"
   }{% unless forloop.last %},{% endunless %}
-{% endif %}{% endfor %} {}
+{% endif %}{% endfor %}
 ]
