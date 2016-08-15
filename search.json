@@ -4,15 +4,15 @@
 {% for post in site.posts %}{% if post.title %}
   {
     "title": "{{ post.title | xml_escape }}",
-    "subtitle": "{{ post.subtitle | xml_escape }}",
-    "category": "{{ post.category | xml_escape }}",
-    "keywords": "{{ post.keywords | xml_escape }}",
-    "location": "{{ post.location | xml_escape }}",
+    "subtitle": "{% if post.subtitle %}{{ post.subtitle | xml_escape }}{% else %}&nbsp{% endif %}",
+    "category": "{% if post.category %}{{ post.category | xml_escape }}{% else %}&nbsp{% endif %}",
+    "keywords": "{% if post.keywords %}{{ post.keywords | xml_escape }}{% else %}&nbsp{% endif %}",
+    "location": "{% if post.location %}{{ post.location | xml_escape }}{% else %}&nbsp{% endif %}",
     "url": "{{ post.url | xml_escape }}"
   },{% endif %}{% endfor %}{% for page in site.pages %}{% if page.title %}
   {
     "title": "{{ page.title | xml_escape }}",
-    "subtitle": "{{ page.subtitle | xml_escape }}",
+    "subtitle": "{% if page.subtitle %}{{ page.subtitle | xml_escape }}{% else %}&nbsp{% endif %}",
     "keywords": "{{ page.keywords | xml_escape }}",
     "url": "{{ page.url | remove:'index.html' | xml_escape }}"
   }{% unless forloop.last %},{% endunless %}
