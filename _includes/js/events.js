@@ -75,7 +75,7 @@ $.ajax(settings).done(function (event) {
         z = z+1;
       }
       else {
-        if (d >= now && z < 4) {
+        if (d.setHours(0,0,0,0) >= now.setHours(0,0,0,0) && z < 4) {
           eventsTable += '<tr> \
                     <td class="agenda-date" class="active" rowspan="1"> \
                       <div class="dayofmonth">'+ dd + '</div> \
