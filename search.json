@@ -22,4 +22,5 @@
   "subtitle":"{{file.summary}}",
   "url":"{{file.url}}"
   }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
 ]
