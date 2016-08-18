@@ -24,7 +24,7 @@ $.ajax(settings).done(function (event) {
   z = 0;
   x = 0;
   var now = new Date();
-  console.log(now);
+  console.log('Today is ' + now);
   var eventsTable = "";
   var featuredTxt = "";
   var bannerTxt = "";
@@ -32,7 +32,7 @@ $.ajax(settings).done(function (event) {
   for (var i=0; i < event.length; i++) {
     //console.log(event.length);
     var d = new Date(event[i].date);
-    console.log(d);
+    //console.log(d);
     var id = event[i].eventbright;
     var dd = d.getDate();
     var day = d.getDay();
@@ -41,7 +41,7 @@ $.ajax(settings).done(function (event) {
     //var time = moment(d).format("h:mm a");
     var time = event[i].time;
     if (d >= now && x < 1 && event[i].featured == 'true') {
-      console.log(x);
+      //console.log(x);
       featuredTxt += '<h4>' + event[i].title + '</h4><p>' + event[i].subtitle + '</p>'
       x = x + 1;
       $('#featuredEvent').html(featuredTxt);
