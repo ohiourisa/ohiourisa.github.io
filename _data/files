@@ -1,0 +1,4 @@
+- name: filename
+  url: file url
+  type: filetype
+  summary: file summary
