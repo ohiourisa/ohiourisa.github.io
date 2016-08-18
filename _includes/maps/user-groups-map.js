@@ -38,7 +38,7 @@ var usergroups = new L.geoJson(null, {
 //csv join function
 function csvJoin(properties, csvTable, key) {
   var keyVal = properties[key];
-  console.log(keyVal);
+  //console.log(keyVal);
   //console.log(csvTable[0][keyVal])
   var match = {};
   for (var i = 0; i < csvTable.length; i++) {
@@ -65,7 +65,7 @@ $.getJSON( "/gis-data/ohiourisa_gis_ugs_simple_geojson.json", function(geojson) 
       usergroups.eachLayer(function(layer) {
         csvJoin(layer.feature.properties, table.data, 'usergroups')
       });
-      console.log(usergroups);
+      //console.log(usergroups);
     }
   })
 });
