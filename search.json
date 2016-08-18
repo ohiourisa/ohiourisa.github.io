@@ -17,5 +17,10 @@
     "url": "{{ page.url | remove:'index.html' | xml_escape }}"
   }{% unless forloop.last %},{% endunless %}
 {% endif %}{% endfor %}
-  {% for file in site.data.files %}{% endfor %}
+  {% for file in site.data.files %}
+  {
+  "title": "{{file.name}}",
+  "subtitle":"{{file.summary}}",
+  "url":"{{file.url}}"
+  }{% unless forloop.last %},{% endunless %}
 ]
