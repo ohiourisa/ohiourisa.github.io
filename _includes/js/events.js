@@ -32,6 +32,7 @@ $.ajax(settings).done(function (event) {
   for (var i=0; i < event.length; i++) {
     //console.log(event.length);
     var d = new Date(event[i].date);
+    console.log(d);
     var id = event[i].eventbright;
     var dd = d.getDate();
     var day = d.getDay();
