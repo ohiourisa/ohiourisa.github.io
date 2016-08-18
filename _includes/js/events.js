@@ -24,7 +24,7 @@ $.ajax(settings).done(function (event) {
   z = 0;
   x = 0;
   var now = new Date();
-
+  console.log(now);
   var eventsTable = "";
   var featuredTxt = "";
   var bannerTxt = "";
