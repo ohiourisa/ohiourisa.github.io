@@ -16,8 +16,7 @@
     "keywords": "{{ page.keywords | xml_escape }}",
     "url": "{{ page.url | remove:'index.html' | xml_escape }}"
   },{% endif %}{% endfor %}
-  {% for file in site.data.files %}
-  {
+  {% for file in site.data.files %}{
   "title": "{{file.name}}",
   "subtitle":"{{file.summary}}",
   "url":"{{file.url}}"
