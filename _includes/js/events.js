@@ -38,7 +38,8 @@ $.ajax(settings).done(function (event) {
     var day = d.getDay();
     var mm = d.getMonth(); //January is 0!
     var year = d.getFullYear();
-    var time = moment(d).format("h:mm a");
+    //var time = moment(d).format("h:mm a");
+    var time = event[i].time;
     if (d >= now && x < 1 && event[i].featured == 'true') {
       console.log(x);
       featuredTxt += '<h4>' + event[i].title + '</h4><p>' + event[i].subtitle + '</p>'
