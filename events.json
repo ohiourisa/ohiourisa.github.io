@@ -9,6 +9,7 @@
     "eventbright": "{{ event.eventbright-id | xml_escape }}",
     "location": "{{ event.location | xml_escape }}",
     "date": "{{ event.date }}",
+    "time":"{{event.time}}",
     "featured": {% if event.featured == true %}"true",{% else %}"false",{% endif %}
     "url": "{{ event.url | xml_escape }}"
   }{% unless forloop.last %},{% endunless %}{% endfor %}
