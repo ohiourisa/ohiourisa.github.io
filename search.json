@@ -15,8 +15,7 @@
     "subtitle": "{% if page.subtitle %}{{ page.subtitle | xml_escape }}{% else %}&nbsp{% endif %}",
     "keywords": "{{ page.keywords | xml_escape }}",
     "url": "{{ page.url | remove:'index.html' | xml_escape }}"
-  }{% unless forloop.last %},{% endunless %}
-{% endif %}{% endfor %}
+  },{% endif %}{% endfor %}
   {% for file in site.data.files %}
   {
   "title": "{{file.name}}",
