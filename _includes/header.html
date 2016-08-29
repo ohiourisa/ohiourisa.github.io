@@ -22,7 +22,7 @@
           <h1 class="slider-title">{{ post.title }}</h1>
           <h5 class="wow fadeIn text-normal">{% if post.subtitle %}{{ post.subtitle }}{% else %}&nbsp;{% endif %}</h5>
           <hr>
-          <a href="{{ post.url | strip: index.html }}" class="btn btn-primary-outline btn-lg wow fadeInUp">Read More</a>
+          <a href="{{ post.url | remove: 'index.html' }}" class="btn btn-primary-outline btn-lg wow fadeInUp">Read More</a>
         </div>
       </li>
       {% endif %}
