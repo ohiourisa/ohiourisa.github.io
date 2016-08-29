@@ -1,6 +1,7 @@
 ---
 permalink: js/scripts.js
 ---
+
 //moment.js
 {% include js/moment.min.js %}
 //scroll

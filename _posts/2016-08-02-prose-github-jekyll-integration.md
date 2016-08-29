@@ -1,11 +1,12 @@
 ---
-published: true
+title: Prose, Jekyll and GitHub
+date: 2016-08-02 00:00:00 Z
+categories:
+- blog
 layout: default
-title: 'Prose, Jekyll and GitHub'
 subtitle: Blog and Website Maintenance in the Browser
-date: 2016-08-02T00:00:00.000Z
-category: blog
 ---
+
 This post was written with the [Prose](http://prose.io) online editor. Prose connects with your GitHub account, allowing static [Jekyll](https://jekyllrb.com) sites to be edited online. Even better, posts can be written in [Markdown](http://daringfireball.net/projects/markdown/). As a bonus, Prose offers a handy toolbar, giving you Markdown shortcuts such as:
  - lists
 

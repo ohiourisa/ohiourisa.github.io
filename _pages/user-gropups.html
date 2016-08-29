@@ -1,19 +1,14 @@
 ---
+title: Ohio GIS User Groups Web Map
+permalink: "/user-groups-fullscreen-map/"
 layout: default
 app: true
-title: Ohio GIS User Groups Web Map
-permalink: /user-groups-fullscreen-map/
 map: maps/user-groups-map.js
 plugins:
-  - >-
-    <script
-    src='https://api.mapbox.com/mapbox.js/plugins/leaflet-pip/v0.1.0/leaflet-pip.min.js'></script>
-  - >-
-    <script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-hash/0.2.1/leaflet-hash.min.js"></script>
-  - >-
-    <script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.min.js"></script>
+- "<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-pip/v0.1.0/leaflet-pip.min.js'></script>"
+- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-hash/0.2.1/leaflet-hash.min.js"></script>
+- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.min.js"></script>
 style: "#map{position:absolute;width:100%;top:0;left:0;bottom:0;}"
 ---
+
 <div id="map"></div>

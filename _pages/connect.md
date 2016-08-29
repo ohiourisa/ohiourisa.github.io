@@ -1,6 +1,7 @@
 ---
-layout: default
 title: Connect
+permalink: "/connect/index.html"
+layout: default
 subtitle: Contact Ohio URISA
-permalink: /connect/index.html
 ---
+

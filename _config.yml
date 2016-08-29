@@ -1,8 +1,25 @@
+---
+title: Ohiourisa.Github.Io
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: default
 name: Ohio Chapter of URISA
-url: ""
-baseurl: "https://ohiourisa.github.io"
-permalink: /:categories/:title/
-description: Ohio URISA Homepage - An officially recognized association of GIS Professionals in Ohio
+url: ''
+baseurl: https://ohiourisa.github.io
+permalink: "/:categories/:title/"
+description: Ohio URISA Homepage - An officially recognized association of GIS Professionals
+  in Ohio
 author: Ohio URISA
 header-img: world-large-inv-2.png
 logo: ohurisa-logo.png
@@ -10,17 +27,9 @@ future: true
 twitter: ohiourisa
 github: ohiourisa
 facebook: 216028668491458
-address: "PO BOX 282148"
-city: "Columbus, OH 43228"
+address: PO BOX 282148
+city: Columbus, OH 43228
 include:
-  - _pages
+- _pages
 exclude:
-  - node_modules
-#sets default frontmatter settings
-defaults:
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
-      type: "posts"
-    values:
-      layout: "default"
+- node_modules
