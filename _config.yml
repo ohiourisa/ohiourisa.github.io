@@ -1,7 +1,7 @@
 name: Ohio Chapter of URISA
 url: ""
 baseurl: "https://ohiourisa.github.io"
-permalink: /:categories/:title/index.html
+permalink: /:categories/:title/
 description: Ohio URISA Homepage - An officially recognized association of GIS Professionals in Ohio
 author: Ohio URISA
 header-img: world-large-inv-2.png
