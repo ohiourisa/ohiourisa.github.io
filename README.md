@@ -1,5 +1,9 @@
 ## Demo site for Ohio URISA
 
+### [Jekyll](https://jekyllrb.com/)
+
+### [Simple Editor](http://prose.io/)
+
 ### Current Site - http://ohurisa.org
 
 Theme based on the Bootstrap 4 theme found [on Codeply](http://www.codeply.com/render/kNmg5E60WS).
