@@ -4,6 +4,8 @@
 
 ### [Simple Editor](http://prose.io/)
 
+### [Explain Posts vs Pages vs _data vs Collections](http://ben.balter.com/2015/02/20/jekyll-collections/)
+
 ### Current Site - http://ohurisa.org
 
 Theme based on the Bootstrap 4 theme found [on Codeply](http://www.codeply.com/render/kNmg5E60WS).
