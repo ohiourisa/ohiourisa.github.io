@@ -60,7 +60,7 @@ function createList(list) {
         list.eachLayer(function(layer) {
             var name = layer.feature.properties.usergroups;
             console.log(layer);
-          div.innerHTML += '<li id="' + layer.feature.properties.usergroups + '" style="list-style:none;">' + name + '</li>';
+          div.innerHTML += '<li id="' + layer.feature.properties.usergroups + '" class="list" style="list-style:none;">' + name + '</li>';
           console.log(layer.feature.properties.usergroups)  
         });
         
@@ -69,7 +69,7 @@ function createList(list) {
     groupList.addTo(map);
 }
 
-$(".group-list li").click(function() {
+$(".list").click(function() {
     map.closePopup();
     var clickID = "";
     clickID = $(this).prop('id');
