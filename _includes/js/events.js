@@ -40,7 +40,7 @@ $.ajax(settings).done(function (data) {
     var id = event[i].eventbright;
     var dd = moment(d).format('D');
     console.log(dd);
-    var day = moment(d).format('dddd');
+    var day = moment(d).format('d');
     var mm = moment(d).format('M'); //January is 1!
     var year = moment(d).format('YYYY');
     //var time = moment(d).format("h:mm a");
@@ -63,7 +63,7 @@ $.ajax(settings).done(function (data) {
         eventsTable += '<tr> \
                   <td class="agenda-date" class="active" rowspan="1"> \
                     <div class="dayofmonth">'+ dd + '</div> \
-                    <div class="dayofweek">' + day + '</div> \
+                    <div class="dayofweek">' + days[day] + '</div> \
                     <div class="shortdate text-muted">' + months[mm] + ', ' + year + '</div> \
                   </td> \
                   <td class="agenda-time">' + time + ' \
