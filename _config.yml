@@ -4,7 +4,6 @@ timezone: America/New_York
 collections:
   events:
     title: Events
-    output: true
     permalink: "/events/:path"
   posts:
     title: Posts
