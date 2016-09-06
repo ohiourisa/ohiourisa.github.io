@@ -26,7 +26,7 @@ $.ajax(settings).done(function (data) {
   var y = 0,
   z = 0;
   x = 0;
-  var now = moment().valueOf();
+  var now = moment();
   console.log('Today is ' + now);
   var eventsTable = "";
   var featuredTxt = "";
@@ -34,24 +34,25 @@ $.ajax(settings).done(function (data) {
 
   for (var i=0; i < event.length; i++) {
     //console.log(event.length);
+    var eventDate = moment(event[i].date);
     var d = moment(event[i].date).format();
     console.log(d);
     var id = event[i].eventbright;
-    var dd = moment(d, 'D');
+    var dd = moment(d).format('D');
     console.log(dd);
-    var day = moment(d, 'dddd');
-    var mm = moment(d, 'M'); //January is 1!
-    var year = moment(d, 'YYYY');
+    var day = moment(d).format('dddd');
+    var mm = moment(d).format('M'); //January is 1!
+    var year = moment(d).format('YYYY');
     //var time = moment(d).format("h:mm a");
     var time = event[i].time;
-    if (d >= now && x < 1 && event[i].featured == 'true') {
+    if (eventDate >= now && x < 1 && event[i].featured == 'true') {
       //console.log(x);
       featuredTxt += '<h4>' + event[i].title + '</h4><p>' + event[i].subtitle + '</p>'
       x = x + 1;
       $('#featuredEvent').html(featuredTxt);
     }
     if ($("#eventBanner").length > 0) {
-      if (d >= now && y < 1) {
+      if (eventDate >= now && y < 1) {
         //eventBanner += '<h4>' + event[i].title + '</h4><p>' + event[i].subtitle + '</p>'
         $('#eventBanner').html('Next Event ' + months[mm] + '&nbsp;' + dd);
         y = y + 1;
@@ -79,7 +80,7 @@ $.ajax(settings).done(function (data) {
         z = z+1;
       }
       else {
-        if (moment(event[i].date) >= moment() && z < 4) {
+        if (eventDate >= now && z < 4) {
           eventsTable += '<tr> \
                     <td class="agenda-date" class="active" rowspan="1"> \
                       <div class="dayofmonth">'+ dd + '</div> \
