@@ -59,7 +59,8 @@ function createList(list) {
         var div = L.DomUtil.create('div', 'group-list');
         list.eachLayer(function(layer) {
             var name = layer.feature.properties.usergroups;
-          div.innerHTML += '<li id="layer.feature.properties.usergroups" style="list-style:none;">' + name + '</li>';
+            console.log(layer);
+          div.innerHTML += '<li id="' + layer.feature.properties.usergroups + '" style="list-style:none;">' + name + '</li>';
           console.log(layer.feature.properties.usergroups)  
         });
         
@@ -68,7 +69,7 @@ function createList(list) {
     groupList.addTo(map);
 }
 
-$(".group-list").click(function() {
+$(".group-list li").click(function() {
     map.closePopup();
     var clickID = "";
     clickID = $(this).prop('id');
