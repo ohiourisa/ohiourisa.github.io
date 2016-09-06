@@ -58,7 +58,7 @@ function createList(list) {
     groupList.onAdd = function(map) {
         var div = L.DomUtil.create('div', 'group-list');
         list.eachLayer(function(layer) {
-          div.innerHTML += '<li>' + layer.feature.properties.usergroups + '</li>';
+          div.innerHTML += '<li style="list-style:none;">' + layer.feature.properties.usergroups + '</li>';
           console.log(layer.feature.properties.usergroups)  
         });
         
