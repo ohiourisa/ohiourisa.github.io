@@ -55,7 +55,7 @@ function csvJoin(properties, csvTable, key) {
 
 function createList(layer) {
     var div = L.DomUtil.create('div', 'group-list'),
-        layer.eachLayer(function(layer) {
+        layer.eachLayer(function(feature, layer) {
           console.log(layer.feature.properties.usergroups)  
         })
         
