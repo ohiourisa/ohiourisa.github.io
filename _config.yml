@@ -19,7 +19,7 @@ defaults:
   values:
     layout: default
 - scope:
-    path: '_/events'
+    path: _/events
   values:
     layout: default
 name: Ohio Chapter of URISA
