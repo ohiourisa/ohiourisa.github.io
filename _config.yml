@@ -2,16 +2,16 @@
 title: Ohiourisa.Github.Io
 timezone: America/New_York
 collections:
+  events:
+    title: Events
+    output: true
+    permalink: "/events/:path"
   posts:
     title: Posts
     output: true
   uploads:
     title: Uploads
     output: true
-  events:
-    title: Events
-    output: true
-    permalink: /events/:path
 defaults:
 - scope:
     path: ''
