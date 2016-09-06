@@ -2,12 +2,15 @@
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://ohiourisa.github.io/events.json",
+  "url": "https://ohiourisa.github.io/events-new.json",
   "method": "GET",
   "headers": {}
 }
 
 $.ajax(settings).done(function (event) {
+  /*event.sort(function(a,b) {
+    
+  })*/
   /////////////////////
   //console.log(event);
 
