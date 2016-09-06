@@ -1,6 +1,0 @@
-- name: example event
-  date: 2016-012-01
-  eventbright: https://this would be the url
-  about: short description
-  sponsored: true, leave out if false
-  
