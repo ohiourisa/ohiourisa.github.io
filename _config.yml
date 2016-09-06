@@ -8,6 +8,10 @@ collections:
   uploads:
     title: Uploads
     output: true
+  events:
+    title: Events
+    output: true
+    permalink: /events/:path
 defaults:
 - scope:
     path: ''
