@@ -37,10 +37,10 @@ $.ajax(settings).done(function (data) {
     var d = moment(event[i].date).format();
     console.log(d);
     var id = event[i].eventbright;
-    var dd = moment(d, D);
-    var day = moment(d, dddd);
-    var mm = moment(d, M); //January is 1!
-    var year = moment(d, YYYY);
+    var dd = moment(d, 'D');
+    var day = moment(d, 'dddd');
+    var mm = moment(d, 'M'); //January is 1!
+    var year = moment(d, 'YYYY');
     //var time = moment(d).format("h:mm a");
     var time = event[i].time;
     if (d >= now && x < 1 && event[i].featured == 'true') {
