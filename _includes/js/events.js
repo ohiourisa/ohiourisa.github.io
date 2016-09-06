@@ -8,9 +8,8 @@ var settings = {
 }
 
 $.ajax(settings).done(function (event) {
-  /*event.sort(function(a,b) {
-    
-  })*/
+  _.sortBy(event, 'date');
+  console.log(event);
   /////////////////////
   //console.log(event);
 
