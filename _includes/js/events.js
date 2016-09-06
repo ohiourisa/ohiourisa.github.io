@@ -34,7 +34,7 @@ $.ajax(settings).done(function (data) {
 
   for (var i=0; i < event.length; i++) {
     //console.log(event.length);
-    var d = moment(event[i].date);
+    var d = moment(event[i].date).format();
     console.log(d);
     var id = event[i].eventbright;
     var dd = d.getDate();
