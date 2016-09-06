@@ -26,7 +26,7 @@ $.ajax(settings).done(function (data) {
   var y = 0,
   z = 0;
   x = 0;
-  var now = new Date();
+  var now = moment().valueOf();
   console.log('Today is ' + now);
   var eventsTable = "";
   var featuredTxt = "";
@@ -78,7 +78,7 @@ $.ajax(settings).done(function (data) {
         z = z+1;
       }
       else {
-        if (d.setHours(0,0,0,0) >= now.setHours(0,0,0,0) && z < 4) {
+        if (moment(event[i].date) >= moment() && z < 4) {
           eventsTable += '<tr> \
                     <td class="agenda-date" class="active" rowspan="1"> \
                       <div class="dayofmonth">'+ dd + '</div> \
