@@ -1,5 +1,6 @@
 - name: example event
   group: OVRDC
+  category: usergroups
   date: 2016-12-01
   time: 5:30 pm
   about: "The Westin Harbour Castle, Toronto, 1 Harbour Square, Toronto, ON M5J 1A6, Canada
