@@ -54,12 +54,17 @@ function csvJoin(properties, csvTable, key) {
 }
 
 function createList(list) {
-    var div = L.DomUtil.create('div', 'group-list');
-    list.eachLayer(function(layer) {
-      console.log(layer.feature.properties.usergroups)  
-    });
+    var groupList = L.control({position: 'bottomleft'});
+    groupList.onAdd = function(map) {
+        var div = L.DomUtil.create('div', 'group-list');
+        list.eachLayer(function(layer) {
+          div.innerHTML += '<li>' + layer.feature.properties.usergroups + '</li>';
+          console.log(layer.feature.properties.usergroups)  
+        });
         
-    return div
+        return div
+    }
+    groupList.addTo(map);
 }
 
 $.getJSON( "/gis-data/ohiourisa_gis_ugs_simple_geojson.json", function(geojson) {
