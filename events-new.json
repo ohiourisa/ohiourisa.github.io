@@ -11,6 +11,7 @@
     "location": "{{ event.location | xml_escape }}",
     "date": "{{ event.date }}",
     "time":"{{event.time}}",
+    "about": "{{event.about | xml_escape}}",
     "sponsored": {% if event.sponsored == true %}"true"{% else %}"false"{% endif %},
     "featured": {% if event.featured == true %}"true",{% else %}"false",{% endif %}
     "url": "{{ event.url | xml_escape }}"
