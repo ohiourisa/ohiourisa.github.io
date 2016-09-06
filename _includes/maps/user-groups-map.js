@@ -54,10 +54,10 @@ function csvJoin(properties, csvTable, key) {
 }
 
 function createList(list) {
-    var div = L.DomUtil.create('div', 'group-list'),
-        list.eachLayer(function(feature, layer) {
-          console.log(layer.feature.properties.usergroups)  
-        })
+    var div = L.DomUtil.create('div', 'group-list');
+    list.eachLayer(function(layer) {
+      console.log(layer.feature.properties.usergroups)  
+    });
         
     return div
 }
