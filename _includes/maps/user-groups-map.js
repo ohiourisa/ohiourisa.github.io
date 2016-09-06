@@ -53,6 +53,15 @@ function csvJoin(properties, csvTable, key) {
   }
 }
 
+function createList(layer) {
+    var div = L.DomUtil.create('div', 'group-list'),
+        layer.eachLayer(function(layer) {
+          console.log(layer.feature.properties.usergroups)  
+        })
+        
+    return div
+}
+
 $.getJSON( "/gis-data/ohiourisa_gis_ugs_simple_geojson.json", function(geojson) {
   var usergroupData = new L.geoJson(geojson);
   usergroups.addData(usergroupData.toGeoJSON());
@@ -65,7 +74,7 @@ $.getJSON( "/gis-data/ohiourisa_gis_ugs_simple_geojson.json", function(geojson) 
       usergroups.eachLayer(function(layer) {
         csvJoin(layer.feature.properties, table.data, 'usergroups')
       });
-      //console.log(usergroups);
+      createList(usergroups);
     }
   })
 });
