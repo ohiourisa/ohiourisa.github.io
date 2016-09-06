@@ -1,6 +1,6 @@
 ---
 title: A Future Event
-date: 2016-10-01
+date: 2016-10-01 00:00:00 -04:00
 categories:
 - events
 layout: default
