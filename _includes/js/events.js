@@ -64,7 +64,7 @@ $.ajax(settings).done(function (data) {
                   <td class="agenda-date" class="active" rowspan="1"> \
                     <div class="dayofmonth">'+ dd + '</div> \
                     <div class="dayofweek">' + day + '</div> \
-                    <div class="shortdate text-muted">' + mm + ', ' + year + '</div> \
+                    <div class="shortdate text-muted">' + months[mm] + ', ' + year + '</div> \
                   </td> \
                   <td class="agenda-time">' + time + ' \
                      \
