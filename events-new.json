@@ -4,13 +4,14 @@
 [
 {% for event in site.data.events %}
   {
-    "title": "{{ event.title | xml_escape }}",
+    "title": "{{ event.name | xml_escape }}",
     "subtitle": "{{ event.location | xml_escape }}",
     "keywords": "{{ event.keywords | xml_escape }}",
     "eventbright": "{{ event.eventbright-id | xml_escape }}",
     "location": "{{ event.location | xml_escape }}",
     "date": "{{ event.date }}",
     "time":"{{event.time}}",
+    "sponsored": {% if event.sponsored == true %}"true"{% else %}"false"{% endif %},
     "featured": {% if event.featured == true %}"true",{% else %}"false",{% endif %}
     "url": "{{ event.url | xml_escape }}"
   }{% unless forloop.last %},{% endunless %}{% endfor %}
