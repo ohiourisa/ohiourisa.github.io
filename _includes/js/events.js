@@ -7,8 +7,8 @@ var settings = {
   "headers": {}
 }
 
-$.ajax(settings).done(function (event) {
-  _.sortBy(event, function(o) { return (new Date(o.date).getTime()) });
+$.ajax(settings).done(function (data) {
+  var event = _.sortBy(event, function(o) { return (new Date(o.date).getTime()) });
   console.log(event);
   /////////////////////
   //console.log(event);
