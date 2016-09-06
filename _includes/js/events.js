@@ -38,6 +38,7 @@ $.ajax(settings).done(function (data) {
     console.log(d);
     var id = event[i].eventbright;
     var dd = moment(d, 'D');
+    console.log(dd);
     var day = moment(d, 'dddd');
     var mm = moment(d, 'M'); //January is 1!
     var year = moment(d, 'YYYY');
