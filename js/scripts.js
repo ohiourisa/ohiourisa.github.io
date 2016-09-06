@@ -1,7 +1,8 @@
 ---
 permalink: js/scripts.js
 ---
-
+//underscore
+{% include js/underscore.min.js %}
 //Format Google Calendar
 {% include js/format-google-calendar.min.js %}
 //moment.js
