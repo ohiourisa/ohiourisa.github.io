@@ -58,7 +58,8 @@ function createList(list) {
     groupList.onAdd = function(map) {
         var div = L.DomUtil.create('div', 'group-list');
         list.eachLayer(function(layer) {
-          div.innerHTML += '<li style="list-style:none;">' + layer.feature.properties.usergroups + '</li>';
+            var name = layer.feature.properties.usergroups;
+          div.innerHTML += '<li id="name" style="list-style:none;">' + name + '</li>';
           console.log(layer.feature.properties.usergroups)  
         });
         
@@ -66,6 +67,28 @@ function createList(list) {
     }
     groupList.addTo(map);
 }
+
+$(".group-list").click(function() {
+    map.closePopup();
+    var clickID = "";
+    clickID = $(this).prop('id');
+    console.log(clickID);
+    usergroups.eachLayer(function(layer) {
+      if (layer.feature.properties.usergroups === clickID) {
+        map.panTo(layer.getBounds());
+        var click = 1;
+        map.on('moveend', function() {
+          if (click === 1) {
+            layer.openPopup();
+          }
+        });
+        layer.on('popupopen', function() {
+          click = 2
+        });
+      }
+    });
+    click = 2;
+  });
 
 $.getJSON( "/gis-data/ohiourisa_gis_ugs_simple_geojson.json", function(geojson) {
   var usergroupData = new L.geoJson(geojson);
