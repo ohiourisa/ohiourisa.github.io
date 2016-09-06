@@ -59,7 +59,7 @@ function createList(list) {
         var div = L.DomUtil.create('div', 'group-list');
         list.eachLayer(function(layer) {
             var name = layer.feature.properties.usergroups;
-          div.innerHTML += '<li id="name" style="list-style:none;">' + name + '</li>';
+          div.innerHTML += '<li id="layer.feature.properties.usergroups" style="list-style:none;">' + name + '</li>';
           console.log(layer.feature.properties.usergroups)  
         });
         
