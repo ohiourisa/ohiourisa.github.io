@@ -1,11 +1,7 @@
 ---
-title: Ohio URISA
+title: ohiourisa.github.io
 timezone: America/New_York
 collections:
-  events:
-    title: Events
-    output: false
-    permalink: "/events/:path"
   posts:
     title: Posts
     output: true
@@ -16,11 +12,6 @@ defaults:
 - scope:
     path: ''
     type: posts
-  values:
-    layout: default
-- scope:
-    path: ''
-    type: events
   values:
     layout: default
 name: Ohio Chapter of URISA
