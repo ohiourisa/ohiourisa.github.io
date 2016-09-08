@@ -14,6 +14,15 @@ defaults:
     type: posts
   values:
     layout: default
+- scope:
+    path: '/assets'
+  values:
+    layout: 
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: default
 name: Ohio Chapter of URISA
 url: 
 baseurl: https://ohiourisa.github.io
