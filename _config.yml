@@ -11,12 +11,7 @@ collections:
 defaults:
 - scope:
     path: ''
-    type: posts
-  values:
-    layout: default
-- scope:
-    path: ''
-    type: pages
+    type: "posts"
   values:
     layout: default
 name: Ohio Chapter of URISA
