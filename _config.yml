@@ -15,7 +15,7 @@ defaults:
   values:
     layout: default
 - scope:
-    path: '/assets'
+    path: "/assets"
   values:
     layout: 
 - scope:
