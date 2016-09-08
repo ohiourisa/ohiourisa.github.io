@@ -1,5 +1,6 @@
 ---
 title: Ohio URISA Statewide User Group Meeting
+date: 2016-09-29 00:00:00 -04:00
 categories:
 - events
 subtitle: Park St Cantina at the 2016 Ohio GIS Conference

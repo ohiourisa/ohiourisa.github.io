@@ -1,7 +1,6 @@
 ---
-title: Another Future Event
-date: 2016-11-02 21:00:00 Z
-published: false
+title: past
+date: 2016-07-30 17:00:00 -04:00
 categories:
 - events
 layout: default
