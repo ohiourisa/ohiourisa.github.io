@@ -2,6 +2,9 @@
 title: ohiourisa.github.io
 timezone: America/New_York
 collections:
+  external-events:
+    title: External Events
+    output: true
   posts:
     title: Posts
     output: true
