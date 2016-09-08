@@ -1,6 +1,6 @@
 ---
 title: ohiourisa.github.io
-timezone: America/New_York
+timezone: EST5EDT
 collections:
   posts:
     title: Posts
@@ -17,7 +17,7 @@ defaults:
 name: Ohio Chapter of URISA
 url: ''
 baseurl: https://ohiourisa.github.io
-permalink: "/:categories/:title/"
+permalink: "/:year/:month/:day/:title/"
 description: Ohio URISA Homepage - An officially recognized association of GIS Professionals
   in Ohio
 author: Ohio URISA

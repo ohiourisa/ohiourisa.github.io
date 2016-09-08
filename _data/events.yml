@@ -1,32 +1,24 @@
-- name: example event
+- title: Test Event
   group: OVRDC
   category: usergroups
-  date: 2014-12-01
-  time: 5:30 pm
+  start: 2016-09-01T10:30
+  end: 2016-09-03T15:30
   about: "The Westin Harbour Castle, Toronto, 1 Harbour Square, Toronto, ON M5J 1A6, Canada
 GIS-Pro 2016: URISA’s 54th Annual Conference October 31-November 3, 2016 Westin Harbour Castle - Toronto, Ontario Geospatial information is everywhere, at everyone’s fingertips and URISA as an organization has been at the forefront for the past 50 years, through global technology and social shifts. In the time it took you to pull up the description of this conference, perhaps on your phone, tablet or laptop, you have already considered the conference location, investigated the good eats and conference events, and mapped all of your indoor and outside activities. URISA connects members and partners with the educational, networking and collaboration resources that professionals need to evolve geospatial tools and solutions that respond to real places in real time. Join the GIS Community in Toronto, Ontario for a powerful, collective exchange of GIS knowledge! Note: If you get a phone call from someone claiming to be from the Westin Harbour Castle saying that there is now a cheaper rate... just hang up. It is a scam. URISA's Event page"
-  url: http://ohurisa.org/python-workshop
+  url: '#'
 
-- name: example event
+- title: Another Event
   group: OVRDC
-  date: 2016-11-01
-  time: 3:30 pm
-  about: "Description"
-  url: http://cnn.com
-  sponsored: true
+  category: usergroups
+  start: 2016-09-20T09:30
+  about: this is a description
+  url: '#'
 
-- name: Leaflet Intro
-  group: OhioURISA
-  date: 2016-12-01
-  group: OhioURISA
-  time: 1:00 pm
-  about: Description
-  url: http://ohurisa.org/leaflet-intro
-  
-- name: example event
-  group: OVRDC
-  date: 2015-11-01
-  time: 3:30 pm
-  about: "Description"
-  url: http://cnn.com
-  sponsored: true
+- title: Ohio URISA Statewide User Group Meeting
+  categories:
+    - events
+  start: 2016-09-29T17:30
+  subtitle: Park St Cantina at the 2016 Ohio GIS Conference
+  location: Park St. Cantina
+  eventbright-id: 26519135448
+  featured: true

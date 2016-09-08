@@ -12,14 +12,14 @@
   <meta property="og:site_name" content="{{ site.name }}" />
   <meta property="og:title" content="{{ page.title }}" />
   <meta propety="og:type" content="{% if page.layout == post %}article{% else %}website{% endif %}" />
-  <meta property="og:image" content="{{ site.baseurl }}/img/{% if page.feature-img %}{{ page.feature-img }}{% else %}{{ site.header-img }}{% endif %}" />
+  <meta property="og:image" content="{{ site.baseurl }}/assets/img/{% if page.feature-img %}{{ page.feature-img }}{% else %}{{ site.header-img }}{% endif %}" />
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
   <link property="og:url" content="{{ site.baseurl }}{{ page.url | remove:'index.html' }}/" />
   <title>{% if page.title %}{{ page.title }} | {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
   <!-- end meta details-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <!--Bootstrap 4-->
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap-4.0.0-alpha.min.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap-4.0.0-alpha.min.css">
   <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous"-->
   <!--Animate Styles-->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
@@ -40,7 +40,9 @@
   <!--MailChimp Embed Styles-->
   <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
   <!--custom theme styles-->
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/styles.css" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.0.0/fullcalendar.css" />
+  <link rel="stylesheet" media="print" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.0.0/fullcalendar.print.css" />
   {% if page.style %}<style>
   {{page.style}}</style>{% endif %}
 </head>

@@ -1,15 +1,14 @@
-
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://ohiourisa.github.io/events-new.json",
+  "url": "{{ site.baseurl }}/assets/events-new.json",
   "method": "GET",
   "headers": {}
 }
 
 $.ajax(settings).done(function (data) {
-  var event = _.sortBy(data, function(o) { return (new Date(o.date).getTime()) });
-  event.reverse();
+  var event = _.sortBy(data, function(o) { return (new Date(o.start).getTime()) });
+  //event.reverse();
   console.log(event);
   /////////////////////
   //console.log(event);
@@ -34,8 +33,8 @@ $.ajax(settings).done(function (data) {
 
   for (var i=0; i < event.length; i++) {
     //console.log(event.length);
-    var eventDate = moment(event[i].date);
-    var d = moment(event[i].date).format();
+    var eventDate = moment(event[i].start);
+    var d = moment(event[i].start).format();
     console.log(d);
     var id = event[i].eventbright;
     var dd = moment(d).format('D');
@@ -44,7 +43,7 @@ $.ajax(settings).done(function (data) {
     var mm = moment(d).format('M'); //January is 1!
     var year = moment(d).format('YYYY');
     //var time = moment(d).format("h:mm a");
-    var time = event[i].time;
+    var time = moment(d).format('h:mm a');
     if (eventDate >= now && x < 1 && event[i].featured == 'true') {
       //console.log(x);
       featuredTxt += '<h4>' + event[i].title + '</h4><p>' + event[i].subtitle + '</p>'
@@ -80,7 +79,7 @@ $.ajax(settings).done(function (data) {
         z = z+1;
       }
       else {
-        if (eventDate >= now && z < 4) {
+        if (eventDate >= now && z < 10) {
           eventsTable += '<tr> \
                     <td class="agenda-date" class="active" rowspan="1"> \
                       <div class="dayofmonth">'+ dd + '</div> \

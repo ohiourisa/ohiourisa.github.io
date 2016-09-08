@@ -61,9 +61,9 @@ function createList(list) {
             var name = layer.feature.properties.usergroups;
             //console.log(layer);
           div.innerHTML += '<li id="' + layer.feature.properties.usergroups + '" class="list" style="list-style:none;">' + name + '</li>';
-          console.log(layer.feature.properties.usergroups)  
+          console.log(layer.feature.properties.usergroups)
         });
-        
+
         return div
     }
     groupList.addTo(map);
@@ -91,10 +91,10 @@ $(".list").click(function() {
     click = 2;
   });
 
-$.getJSON( "/gis-data/ohiourisa_gis_ugs_simple_geojson.json", function(geojson) {
+$.getJSON( "/assets/gis-data/ohiourisa_gis_ugs_simple_geojson.json", function(geojson) {
   var usergroupData = new L.geoJson(geojson);
   usergroups.addData(usergroupData.toGeoJSON());
-  Papa.parse("/gis-data/ohiourisa_gis_ugs_table.csv", {
+  Papa.parse("/assets/gis-data/ohiourisa_gis_ugs_table.csv", {
     download: true,
     header: true,
     skipEmptyLines: true,

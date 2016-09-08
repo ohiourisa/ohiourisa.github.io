@@ -1,9 +1,7 @@
 ---
-permalink: js/scripts.js
 ---
-
-//underscore
-{% include js/underscore.min.js %}
+//bootstrap js
+{% include js/bootstrap-4.0.0-alpha.min.js %}
 //Format Google Calendar
 {% include js/format-google-calendar.min.js %}
 //moment.js
