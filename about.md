@@ -1,6 +1,6 @@
 ---
 title: About
-permalink: /about/
+permalink: "/about/"
 layout: default
 headline: About Ohio URISA
 subtitle: Learn More about the History of Ohio URISA
