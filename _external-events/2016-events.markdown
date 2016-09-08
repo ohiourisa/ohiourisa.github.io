@@ -11,3 +11,9 @@ events:
     start: 2016-09-20T09:30
     about: this is a description
     url: '#'
+  - title: Another Event
+    group: OVRDC
+    category: usergroups
+    start: 2016-10-20T09:30
+    about: this is a description
+    url: '#'
