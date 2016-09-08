@@ -1,6 +1,6 @@
 ---
+layout:
 ---
-
 //bootstrap js
 {% include js/bootstrap-4.0.0-alpha.min.js %}
 //Format Google Calendar
